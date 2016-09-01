@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScriptVideo</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+ .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+ /*      -webkit-filter: grayscale(90%); */
+      filter: grayscale(100%); /* make all photos black and white  */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="Main.html">Login</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Intro.html">Intro</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="JavaScriptVideo.html">JavaScriptVideo</a></li>
+<!--         <li><a href="#Audio">Audio</a></li>   오디오를 배경에 깔아도 될것 같아요-->
+        <li><a href="Plug-ins.html">Plug-ins</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">ETC
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="YouTube.html">YouTube</a></li>
+            <li><a href="YouTube2.html">YouTube2</a></li>
+            <li><a href="FileUp.html">FileUpload</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+
+<body>
+<div>
+<!--   <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br> -->
+  
+<div style="text-align:center"> 
+  <video id="video1" width="420">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<div style="margin:auto;">
+   <div style="float:left;text-align:center;">
+        <input type="image" src="images/play.jpg" id="btn" onclick="playPause()">
+   </div>
+   
+     <div style="text-align:left; float:left;">
+     <pre>
+     function playPause() {
+          if (myVideo.paused) {
+          //비디오 재생
+           myVideo.play();
+          document.getElementById("btn").setAttribute("src", "images/stop.jpg");
+      } else {
+      //비디오 정지
+           myVideo.pause();
+          document.getElementById("btn").setAttribute("src", "images/play.jpg");
+      }
+   } 
+  </pre>
+  </div>
+ </div>
+  <div style="clear:both;">
+  <input type="image" src="images/off.jpg" id="btn2" onclick="volMute()">
+</div>
+
+
+</div>
+<script>
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+    if (myVideo.paused) {
+       //비디오 재생
+        myVideo.play();
+       document.getElementById("btn").setAttribute("src", "images/stop.jpg");
+   } else {
+      //비디오 정지
+        myVideo.pause();
+       document.getElementById("btn").setAttribute("src", "images/play.jpg");
+   }
+}
+
+function volMute() {
+   if (myVideo.muted == true) {
+      myVideo.muted = false;
+      document.getElementById("btn2").setAttribute("src", "images/off.jpg");
+   } else {
+      myVideo.muted = true;
+      document.getElementById("btn2").setAttribute("src", "images/on.jpg");
+   }
+
+} 
+
+function makeBig() {
+    myVideo.width = 560;
+}
+
+function makeSmall() {
+    myVideo.width = 320;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+</script>
+
+</body>
+</html>

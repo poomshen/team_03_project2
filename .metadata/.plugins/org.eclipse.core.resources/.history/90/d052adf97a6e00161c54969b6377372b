@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Ex09_Login.jsp" method="get" name="Loginform">
+	ID: <input type="text" name="txtuserid"><br>
+	PWD :<input type="password" name="txtpwd">
+</form>
+
+</body>
+</html>

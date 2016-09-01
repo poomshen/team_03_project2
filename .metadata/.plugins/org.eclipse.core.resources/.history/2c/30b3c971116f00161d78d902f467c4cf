@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우편번호 검색창</title>
+</head>
+<body>
+ 	<form action="" name="zipform">
+ 		<input type="button" value="200-300 서울시 강남구 역삼동"
+ 			name="btn"  onclick=""
+ 		> 
+ 	</form>
+</body>
+</html>

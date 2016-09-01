@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <ul>
+      <li value="0">javascript</li>
+      <li value="1">dom</li>
+      <li value="2">jquery</li>
+   </ul>
+   <ul>
+      <li value="aaaa">hi</li>
+      <li value="bbbb">hello</li>
+   </ul>
+   <input type="radio" name="hobby" value="B" checked>야구<br>
+   <input type="radio" name="hobby" value="S" >축구<br>
+   <input type="radio" name="hobby" value="T" >테니스<br>
+   <hr>
+   <input type="button" value="Radioname" onclick="getEleName()"><br>
+   <input type="button" value="Radioname2" id="RadioBtn"><br>
+   <input type="button" value="Tagname" onclick="getEleTagName()"><br>
+</body>
+</html>

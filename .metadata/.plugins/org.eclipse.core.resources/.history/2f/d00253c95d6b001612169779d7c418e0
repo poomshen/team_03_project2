@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p{
+		border: 2px solid red;
+		padding: 10px;
+		margin: 30px; 
+		background-color:
+	}
+</style>
+</head>
+<body>
+			<h3>Css 속성 정의하기</h3>
+			<p>문단 태그 정의하기_1</p>
+			<p>문단 태그 정의하기_2</p>
+			HELLO WORID
+</body>
+</html>

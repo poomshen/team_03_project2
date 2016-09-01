@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		body {background-color: skyblue;}"
+		h1 {color: white;}
+	</style>
+	
+	<line rel="stylesheet" href="Ex04.css">
+</head>
+<body>
+<h3>Inline</h3>
+<p style="background-color: gold">
+	문단 태그
+</p>
+	<h1>Internal style sheet</h1>
+	<h1>Internal style sheet</h1>
+	<h1>Internal style sheet</h1>
+	<h1>Internal style sheet</h1>
+	<h3> 외부 파일 (css)</h3>
+	<h3> 외부 파일 (css)</h3>
+	<h3> 외부 파일 (css)</h3>
+</body>
+</html>

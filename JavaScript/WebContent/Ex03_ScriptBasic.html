@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 모델을 사용하는 Javascript</title>
+<script type="text/javascript">
+	alert("1번 go..");
+	function print(){
+		//DOM
+		var element = document.getElementById("demo") //id="demo"
+		console.log(element);
+		element.innerHTML = "HELLO WORLD";
+	}
+	
+</script>
+</head>
+<body>
+	2번 body 영역 화면에 출력 <br>
+	<button  onclick="print()" >클릭 하세용</button>
+	<p id="demo"> 난 문단 태그야...</p>
+	<script type="text/javascript">
+		alert("3번 경고창")
+	</script>	
+	<!-- 
+		key point
+		<input type = "text" name="userid" id="userid">
+		1.name :  서버로 데이터 전송시 (ex: ok.jsp?userid = kglim..
+		2. id      :  클라이언트 레벨 (script , css 사용 : 유효성 검증 , 조작  > 식별자)
+	
+	 -->
+</body>
+</html>

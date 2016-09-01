@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScriptVideo</title>
+
+</head>
+<body>
+<div style="height: 660px;">
+<iframe src="main.html" style="height: 100% ;width: 100%"></iframe>
+</div>
+<div>아아아</div>
+</body>
+</html>

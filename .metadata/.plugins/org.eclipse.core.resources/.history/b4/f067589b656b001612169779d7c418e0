@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블 만들기</title>
+</head>
+<body>
+	<table border="1">
+	<tr>
+		<td>가</td>
+		<td>나</td>
+	</tr>
+	<tr>
+	<td>라</td>
+	<td>마</td>
+	</tr>
+	</table>
+	
+	<h3>Table 만들기</h3>
+	<table border="1" style="height:  100px ; width: 200px">
+	<tr>
+		<td colspan="2">AB</td><td>C</td>
+	</tr>
+	<tr>
+		<td>D</td>
+		<td>E</td>
+		<td>F</td>
+	</tr>
+	<tr>
+	<td colspan="3">GHI</td>
+	</tr>
+	</table>
+	
+	<h3>Table 만들기</h3>
+	<table border="1" style="height:  100px ; width: 200px">
+	<tr>
+		<td rowspan="2">AD</td><td>B</td><td>C</td>
+	</tr>
+	<tr>
+		<td>D</td>
+		<td>E</td>
+		<td>F</td>
+	</tr>
+	<tr>
+	<td colspan="3">GHI</td>
+	</tr>
+	</table>
+	
+</body>
+</html>

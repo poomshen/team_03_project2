@@ -1,0 +1,7 @@
+INDEX VERSION 1.129+C:\kosta129\Web\Web\WebClientLab\.metadata\.plugins\org.eclipse.jdt.core
+3249956717.index
+648297546.index
+1594946225.index
+917635176.index
+3321463410.index
+3796961229.index

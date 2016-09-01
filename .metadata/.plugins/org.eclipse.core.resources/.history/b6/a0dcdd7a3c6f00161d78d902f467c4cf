@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<script type="text/javascript">
+	//onload : 발생시점 (body 태그 브라우져에 로딩 되고 나서)
+	//<body onload = "call()">
+	// window.onload = call()
+	//위 함수의 적용 동일 시점
+	window.onload = function(){
+		 //alert("gogo")
+		 var  out="";
+		 out += "<ul>";
+		    out+="<li>javascript</li>";
+		    out+="<li>jquery</li>";
+		    out+="<li>css</li>";
+		  out+="</ul>";
+		  
+		  document.body.innerHTML = out; //body 안에 overwrite
+		  
+		  var  header = document.createElement("h1");
+		  var textnod = document.createTextNode("hello");
+		  header.appendChild(textnod); //<h1>hello</h1>
+		  
+		  document.body.appendChild(header);
+		  
+		  //img 태그 생성하고 이미지 src 속성 만들고 body 태그 추가
+		  var img = document.createElement("img");
+		  //<img> </img>
+		  img.setAttribute('src', 'images/noun_323320_cc.png');
+		  img.setAttribute('width', '100');
+		  img.setAttribute('height', "100");
+	}
+</script>
+</head>
+<body>
+	HELLO  WORLD
+</body>
+</html>

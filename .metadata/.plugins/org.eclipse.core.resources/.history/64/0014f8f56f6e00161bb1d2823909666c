@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 함수 :내장 함수</title>
+<script type="text/javascript">
+		//자바 : public void print(){}
+		// 자바 :  public String print(){return ""}
+		
+		function Callconfirm() {
+			
+		}
+</script>
+</head>
+<body>
+
+</body>
+</html>

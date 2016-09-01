@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우편번호 검색창</title>
+<script type="text/javascript">
+	function zipsearch(obj){
+/* 		alert(obj)
+ 	1.우펴번호 
+ */		
+ 	var  zip = obj.substring(0, 7);
+ 	var addr = obj.substring(7);
+ 	alert(zip + "/" + addr);
+ 	
+ 	//부모창 (opener) : 자식창 입장에서 열어준 부모
+ 	window.oopen
+	}
+</script>
+</head>
+<body>
+ 	<form action="" name="zipform">
+ 		<input type="button" value="200-300 서울시 강남구 역삼동"
+ 			name="btn"  onclick="zipsearch(this.value)" 		> 
+ 	</form>
+</body>
+</html>

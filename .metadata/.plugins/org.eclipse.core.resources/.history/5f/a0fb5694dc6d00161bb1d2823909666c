@@ -1,0 +1,55 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import kr.or.kosta.utills.SingletonHelper;
+
+public class MemberDTO {
+	PreparedStatement stmt = null;
+	ResultSet rs = null;
+	SingletonHelper singlet = new SingletonHelper();
+	Connection conn = singlet.getConnection("oracle");
+	
+	public void insertMember(String name, String id , String pass){
+		try {
+			String sql = "insert into TEAM01 Values(?,?,?)";
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1,id);
+			stmt.setString(2,name);
+			stmt.setString(3,pass);
+			int row = stmt.executeUpdate();
+			if(row >0){
+				System.out.println("회원가입에 성공 하셨습니다");
+			}else {
+				System.out.println("회원가입에 실패 하셨습니다");
+			}
+		}catch (SQLException e) {
+			System.out.println("아이디가 중복 되었습니다.");
+		} 
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public boolean logingck(String id){
+		
+		
+		return true;
+	}
+	
+	public boolean logingck(String id ,String pass){
+		try {
+			String sql = "select * from TEAM01 where id=? and Password=?";
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, id);
+			stmt.setString(2, pass);
+			rs = stmt.executeQuery();
+			return (rs.next());
+		} catch (SQLException e) {
+			System.out.println("로그인에 실패 하셧습니다.아이디와 비밀번호를 확인해 주세요");
+		}
+		return false;
+	}
+	
+}

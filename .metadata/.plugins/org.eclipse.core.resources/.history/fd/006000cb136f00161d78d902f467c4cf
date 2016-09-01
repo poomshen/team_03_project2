@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		var  CheckFlag ="false";
+		function CheckForm(fields){
+			//point
+			//함수안에서 form 안에서 element 를  가지고 올수 있다면
+			
+		}
+</script>
+</head>
+<body>
+		<form action="" name ="myform">
+			좋아하는 과목은: <br>
+			<input type="checkbox" name="list" value="java">java <br>
+			<input type="checkbox" name="list" value="oracle">oracle <br>
+			<input type="checkbox" name="list" value="jsp">jsp <br>
+			<input type="checkbox" name="list" value="html">html <br>
+			<input type="checkbox" name="list" value="css">css <br>
+			<input type="button" value ="전체선택" onclick="CheckForm">
+		</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>개발자 필수 태그 (암기)</title>
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-19" data-genuitec-path="/WebBasic/WebContent/Ex17_Form.html">
+	<form action="Loginok.jsp" method="post" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-19" data-genuitec-path="/WebBasic/WebContent/Ex17_Form.html">
+		<input type="text" name ="id">
+		<input type="text" name="username">
+		<input type="submit" value="로그인하기">
+	</form>
+	<!-- 
+		form 전송을 담당하는 태그
+		전송수단
+		클라이언트 데이터  -> 서버전송 방법
+		
+		action= 목적지 주소(서버 페이지 주소: *.jsp , *.do )
+		method = 전송방법
+		 배 (get) :  데이터 노출  > logionk.jsp?id=kglim (링크 형태 : 게시판 목록 처리)
+		 비행기 (post) : 데이터 감추기  > (http  프로토콜 내부에서 데이터 숨겨서) > loginok.jsp
+		 
+		 
+		 * 선장 (출발) 시동
+		 <input type="submit" 목적지 출발
+		 <input type= "image" 기본적으로 (내부에 : submit)
+		 <input type = "button" > 자바스크립트(document.form.submit() 강제 호출)
+		 
+		 <form 안에서 사용태그
+					<input 계열의 태그 : 입역 , 선택, 수정...
+					
+					get why?
+					link 방식의 전송
+					<a href="board.jsp?boardid=100;">html  내용 </a>	 
+	 -->
+</body>
+</html>

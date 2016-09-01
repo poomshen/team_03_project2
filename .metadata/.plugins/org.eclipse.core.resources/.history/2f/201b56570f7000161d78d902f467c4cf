@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="script/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+ 	$('h1').css("color" ,"blue");
+ })
+</script>
+</head>
+<body>
+	<h1>HELLO INCLUDE</h1>
+</body>
+</html>

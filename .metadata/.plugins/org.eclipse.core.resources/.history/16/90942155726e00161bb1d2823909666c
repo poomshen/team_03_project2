@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 함수 :내장 함수</title>
+<script type="text/javascript">
+		//자바 : public void print(){}
+		// 자바 :  public String print(){return ""}
+		//자바 : public String print(int num){return ""}
+      //parameter 있는 함수
+      function GuUrlTime(url) { //자바스크립트는 타입명시(x) > 변수명
+         window.setTimeout("location.href='" + url + "'" ,3000);         
+      }
+		function Callconfirm() {
+			if(window.confirm("작업내용....")){
+				alert("삭제");
+			}else{
+				alert("취소");
+			}
+		}
+		
+		function ShowPopup() {
+	         //내장함수
+	         //window 객체가 가지는 함수 (open())
+	         //open() 메서드
+	         
+         ///http://www.w3schools.com/jsref/met_win_open.asp
+         //window.open(URL,name,specs,replace)
+         //specs 정의 : 브라우져마다 적용이 다르다
+        window.open("Ex07_popup.html", "zipcode",
+               "width = 200, heigth = 200, resizable = no");
+         // resizable=yes|no|1|0   Whether or not the window is resizable.
+         // IE only (익스플로 에서만)
+		}
+</script>
+</head>
+<body>
+	<h3>내장함수 와 사용자 정의 함수 사용법</h3>
+	<button onclick="Callconfirm()">버튼</button>
+	<input type="button" value="팝업제어" onclick="ShowPopup()">
+	<input type="button" value="주소이동" onclick="GuUrlTim('http://www.naver.com')">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 함수 :내장 함수</title>
+<script type="text/javascript">
+		//자바 : public void print(){}
+		// 자바 :  public String print(){return ""}
+		
+		function Callconfirm() {
+			if(window.confirm("작업내용....")){
+				alert("삭제");
+			}else{
+				alert("취소");
+			}
+		}
+		
+		function ShowPopup() {
+			
+		}
+</script>
+</head>
+<body>
+	<h3>내장함수 와 사용자 정의 함수 사용법</h3>
+	<button onclick="Callconfirm()">버튼</button>
+</body>
+</html>

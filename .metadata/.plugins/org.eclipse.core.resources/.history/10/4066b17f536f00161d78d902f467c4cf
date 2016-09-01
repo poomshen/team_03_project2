@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+	&lt;audio autoplay&gt;<br>
+		&lt;source src = "../audios/banana.mp3"&gt;<br>
+	&lt;/audio&gt;
+	<br>
+	<audio autoplay>
+		<source src = "audios/banana.mp3">
+	</audio>
+	<br><br>
+	
+	&lt;audio controls&gt;<br>
+		&lt;source src="audios/pika.mp3"&gt;<br>
+	&lt;/audio&gt;<br>
+	<audio controls>
+		<source src="audios/pika.mp3">
+	</audio>
+	<br><br>
+	
+	&lt;audio controls loop&gt;<br>
+		&lt;source src="audios/haha.mp3"&gt;<br>
+	&lt;/audio&gt;<br>
+	<audio controls loop>
+		<source src="audios/haha.mp3">
+	</audio>
+	<br><br>
+	
+	
+	</p>
+	
+	
+	
+</body>
+</html>

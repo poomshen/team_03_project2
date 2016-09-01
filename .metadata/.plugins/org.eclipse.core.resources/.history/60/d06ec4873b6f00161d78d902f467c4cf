@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<script type="text/javascript">
+	//onload : 발생시점 (body 태그 브라우져에 로딩 되고 나서)
+	//<body onload = "call()">
+	// window.onload = call()
+	//위 함수의 적용 동일 시점
+	window.onload = function(){
+		 //alert("gogo")
+		 var  out="";
+		 out += "<ul>";
+		    out+="<li>javascript</li>";
+		    out+="<li>jquery</li>";
+		    out+="<li>css</li>";
+		  out+="</ul>";
+		  
+		  document.body.innerHTML = out; //body 안에 overwritee
+	}
+</script>
+</head>
+<body>
+	HELLO  WORLD
+</body>
+</html>

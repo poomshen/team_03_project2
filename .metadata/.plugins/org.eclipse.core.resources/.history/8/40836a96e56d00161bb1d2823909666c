@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>회원가입 완료</title>
+<%@ page import="kosta.MemberDTO" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import=" java.sql.PreparedStatement" %>
+<%@ page import=" java.sql.ResultSet" %>
+<%
+		String username = request.getParameter("name");
+		String  userid  = request.getParameter("id");
+ 		String  userpass = request.getParameter("pass");
+ 		Connection conn = null;
+ 		DriverManager  driverManager = null;
+ 		PreparedStatement stmt = null;
+ 		ResultSet set = null;
+ 		
+ 		Class.forName("com.mysql.jdbc.Driver");
+ 		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kosatdb", "kosta", "1004");
+ 		
+ 		String sql = "insert into TEAM02 Values(?,?,?)";
+		stmt = conn.prepareStatement(sql);
+		stmt.setString(1,userid);
+		stmt.setString(2,username);
+		stmt.setString(3,userpass);
+		int row = stmt.executeUpdate();
+		if(row >0){
+			System.out.println("회원가입 성공");
+		}else {
+			System.out.println("회원가입 실패");
+		}
+	}
+	catch (Exception e) {
+		System.out.println(e.getMessage());
+	}
+%>
+</head>
+<body>
+당신의 name는 : <%= username %>
+당신의 id는 : <%= userid %>
+당신의 pass는 <%= userpass %>
+	회원 가입 완료
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM(Node)</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var myul = document.getElementById("myul");
+		//console.log(myul);
+		var msg = "";
+		msg += "노드명 :" + myul.nodeName;// Tree 구조 (node : element)
+		msg += "\n노드 타입 :" + myul .nodeType;
+		// 요소(태그)  : 1
+		// 요소 (속성) : 2 (<img src =)
+		// 요소(Text) : 3 
+		
+		msg += "\n 노드 값:" + myul.nodeValue;
+		//UL > null 
+		// 속성 (Attribute)  color = red > red
+		//Text  > text
+		//<input type = text value = kglim
+		//(nodename) input , (nodetype) 1 , (nodevalue)  kglim
+		
+		msg += "\n자식 노드 개수 :" +myul.childNodes.length;
+		
+		//alert(msg);
+		var  childs = myul.childNodes;
+		console.log(childs)
+		
+	}
+</script>
+</head>
+<body>
+	<ul id="myul"><li>A</li><li>B</li><li>C</li></ul>
+</body>
+</html>

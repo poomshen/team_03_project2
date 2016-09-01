@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 제어하기</title>
+<script type="text/javascript">
+	
+	
+	//주의 사항 중요
+	window.onload = btnChange;//이벤트에 함수 적용은 (script 에서)
+													// window.onload = btnChange(); 안된다.
+	function btnChange(){
+			var btnobj = document.getElementById("btnchange");
+			console.log(btnobj);
+			// 만약에 id 속성이 없다면
+			//document ,.forms[0].elements[3]
+			//만약 id 가 없고 name="btm"  만 있다면
+			//document.forms[0].btm
+			//id  있다면 > dom 일반적이다.
+			
+			btnobj.onmouseover = function(){
+				var divobj = document.getElementById("myDiv");
+				divobj.style.backgroundColor ="gold"
+			}
+			btnobj.onmouseout = function(){
+				var divobj = document.getElementById("myDiv");
+				divobj.style.backgroundColor ="white"
+			}
+	}
+</script>
+</head>
+<body>
+ 	<form action="">
+ 		<div id="myDiv" style="height: 100px">
+ 			<span id = "str">HELLO</span>
+ 		</div>
+ 		<input type="button" value="버튼1" id="btnchange"><br>
+ 		<input type="button" value="버튼2" onclick="">
+ 	</form>
+</body>
+</html>

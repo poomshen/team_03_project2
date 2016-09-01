@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Ex09_Login.jsp" method="get" name="Loginform">
+	ID: <input type="text" name="txtuserid"><br>
+	PWD :<input type="password" name="txtpwd">
+	
+	<!-- 전송  -->
+<!-- 	<input type="submit" value="전송하기"> -->
+ <input type="image" src="images/noun_323320_cc.png" style="white:100px ;height: 100px">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수(내장)</title>
+<script type="text/javascript">
+var myvar = window.setInterval();
+
+function myTimer() {
+	var d = new Date();
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>유투브 제작</title>
+</head>
+<body>
+   <iframe width="560" height="315" src="//www.youtube.com/embed/hTMfIQFACcQ"
+   frameborder="0" allowfullscreen></iframe>
+ 
+<h1>object 태그 사용 유튜브 동영상 삽입</h1>
+ 
+<object type="text/html" width="560" height="315"
+data="//www.youtube.com/embed/t5vlkDdWu14" allowFullScreen></object>
+</body>
+</html>

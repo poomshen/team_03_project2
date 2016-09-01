@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>(Form - input)</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+				<legend> Test : password</legend>
+				<!-- 목적 : 입력데이터 전송 고유한 이름 name ="" -->
+				Text: <input type="text" name="suerid">
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function  evtProductor(frm){
+		/* console.log(frm); */
+		//console.log(frm.productor.value);
+		//선택되어진 배열의(oprion)태그의 index 값을 ...selectedIndex 속성의 순서를 받아옴
+		//console.log( "index : "+ frm.productor.selectedIndex);
+		//console.log(frm.productor.options[0].value)
+		//console.log(frm.productor.options[0].text)
+		var  text = frm.productor.options[frm.productor.selectedIndex].text;
+		var  value = frm.productor.options[frm.productor.selectedIndex].value;
+		
+		if( frm.productor.selectedIndex != 0){
+		frm.valProductor.value = value;
+		frm.txtProductor.value = text;
+		}else{
+			
+		}
+	}
+
+</script>
+</head>
+<body>
+   모델별 최저가 검색<br>
+   <form name="frmdata">
+         <select name="productor"  style="width: 200px" onchange="evtProductor(this.form)">
+            <option value="A000" selected>제조사</option>
+            <option value="A001">삼성전자</option>
+            <option value="A002">LG전자</option>
+            <option value="A003">Apple</option>
+            <option value="A004">Dell</option>
+         </select>
+          <input type="text" name="valProductor" size="10">
+          <input type="text" name="txtProductor" size="10">
+          <br>
+         
+          <select name="brand" width="200px"  onchange="evtBrand(this.form)">
+              <option value="B000" SELECTED>브랜드</option>
+              <option value="B001">센스</option>
+              <option value="B002">X-Note</option>
+              <option value="B003">MAC</option>
+              <option value="B004">VAIO</option>
+          </select>
+             <input type="text" name="valBrand" size="10">
+             <input type="text" name="txtBrand" size="10">
+   </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>(Form - input)</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+				<legend> Test : password</legend>
+				<!-- 목적 : 입력데이터 전송 고유한 이름 name ="" -->
+				Text: <input type="text" name="suerid"><br>
+				Password: <input type="password"  name="userpwd" maxlength="5"><br>
+				<hr>
+				Text2:  <input type="text" name="data" maxlength="10" size="60px" value="입력해"><br>
+				<hr>
+				readonly(데이터 전송 가능)
+				<input type="text" name ="data2" value="hong" readonly> 
+				disabled(데이터 전송 불가능)
+				<input type="text" name ="data2" value="hong"  disabled="disabled"> 
+		</fieldset>
+		
+		<fieldset>
+			<legend>체크박스 다중 선택: 취미 , 특기</legend>
+			당신의 취미는 ?  <br>
+			농구<input type="checkbox" name="sports_1" value ="A">
+			야구<input type="checkbox" name="sports_2" value ="B">
+			축구<input type="checkbox" name="sports_3" value ="C">
+		</fieldset>
+	</form>
+</body>
+</html>

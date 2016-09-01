@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>개발자 필수 태그 (암기)</title>
+</head>
+<body>
+	<form action="Loginok.jsp" method="post">
+		<input type="text" name ="id">
+		<input type="text" name="username">
+		<input type="submit" value="로그인하기">
+	</form>
+	<!-- 
+		form 전송을 담당하는 태그
+		전송수단
+		클라이언트 데이터  -> 서버전송 방법
+		
+		action= 목적지 주소(서버 페이지 주소: *.jsp , *.do )
+		method = 전송방법
+		 배 (get) :  데이터 노출  > logionk.jsp?id=kglim (링크 형태 : 게시판 목록 처리)
+		 비행기 (post) : 데이터 감추기  > (http  프로토콜 내부에서 데이터 숨겨서) > loginok.jsp
+		 
+		 
+		 * 선장 (출발) 시동
+		 
+		 
+	 -->
+</body>
+</html>

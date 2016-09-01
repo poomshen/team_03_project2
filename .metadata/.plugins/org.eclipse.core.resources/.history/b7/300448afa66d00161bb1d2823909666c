@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--
+http://www.w3schools.com/html/html5_new_elements.asp
+  -->
+</head>
+<body>
+	
+	<form action="action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+<!--  기본적으로 유효성 검증 태그 배포 -->
+<input type="number" name="quantity" min="1" max="5" >
+<input type="submit" value="전송 테스트">
+</body>
+</html>

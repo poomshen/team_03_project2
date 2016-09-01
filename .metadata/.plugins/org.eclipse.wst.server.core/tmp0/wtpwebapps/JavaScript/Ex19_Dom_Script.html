@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<script type="text/javascript">
+	//onload : 발생시점 (body 태그 브라우져에 로딩 되고 나서)
+	//<body onload = "call()">
+	// window.onload = call()
+	//위 함수의 적용 동일 시점
+	window.onload = function(){
+		 //alert("gogo")
+		 var  out="";
+		 out += "<ul>";
+		    out+="<li>javascript</li>";
+		    out+="<li>jquery</li>";
+		    out+="<li>css</li>";
+		  out+="</ul>";
+		  
+		  document.body.innerHTML = out; //body 안에 overwrite
+		  
+		  var  header = document.createElement("h1");
+		  var textnod = document.createTextNode("hello");
+		  header.appendChild(textnod); //<h1>hello</h1>
+		  
+		  document.body.appendChild(header);
+		  
+		  //img 태그 생성하고 이미지 src 속성 만들고 body 태그 추가
+		  var img = document.createElement("img");
+		  //<img> </img>
+		  img.setAttribute('src', 'images/noun_323320_cc.png');
+		  img.setAttribute('width', '100');
+		  img.setAttribute('height', "100");
+		  
+		  document.body.appendChild(img)
+	}
+</script>
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-22" data-genuitec-path="/JavaScript/WebContent/Ex19_Dom_Script.html">
+	HELLO  WORLD
+</body>
+</html>

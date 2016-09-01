@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>image 태그</title>
+</head>
+<body>
+ 		<img alt="" src="images/noun_34882_cc.png" >
+ 		<br>
+ 		<img alt ="" src="./images/noun_34882_cc.png">
+</body>
+</html>

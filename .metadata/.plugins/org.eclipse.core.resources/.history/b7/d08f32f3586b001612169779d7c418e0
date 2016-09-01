@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		body {border-color:  yellow;}"
+		hi {color: blue;}
+	</style>
+</head>
+<body>
+<h3>Inline</h3>
+<p style="background-color: gold">
+	문단 태그
+</p>
+	<h1>Internal style sheet</h1>
+	<h1>Internal style sheet</h1>
+	<h1>Internal style sheet</h1>
+	<h1>Internal style sheet</h1>
+</body>
+</html>

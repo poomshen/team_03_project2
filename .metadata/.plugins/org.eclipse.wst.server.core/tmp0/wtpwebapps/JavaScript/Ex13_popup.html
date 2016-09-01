@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>우편번호 검색창</title>
+<script type="text/javascript">
+	function zipsearch(obj){
+/* 		alert(obj)
+ 	1.우펴번호 
+ */		
+ 	var  zip = obj.substring(0, 7);
+ 	var addr = obj.substring(7);
+ 	//alert(zip + "/" + addr);
+ 	
+ 	//부모창 (opener) : 자식창 입장에서 열어준 부모
+ 	window.opener.mainform.zipcode.value = zip;
+ 	opener.mainform.addr.value = addr;
+ 	window.close();
+	}
+</script>
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-16" data-genuitec-path="/JavaScript/WebContent/Ex13_popup.html">
+ 	<form action="" name="zipform" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-16" data-genuitec-path="/JavaScript/WebContent/Ex13_popup.html">
+ 		<input type="button" value="200-300 서울시 강남구 역삼동"
+ 			name="btn"  onclick="zipsearch(this.value)" 		> 
+ 	</form>
+</body>
+</html>

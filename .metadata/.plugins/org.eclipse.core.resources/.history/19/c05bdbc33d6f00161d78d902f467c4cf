@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 제어하기</title>
+<script type="text/javascript">
+	
+	
+	//주의 사항 중요
+	window.onload = btnChange;//이벤트에 함수 적용은 (script 에서)
+													// window.onload = btnChange(); 안된다.
+	function btnChange(){
+		
+	}
+</script>
+</head>
+<body>
+ 	<form action="">
+ 		<div id="myDiv" style="height: 100px">
+ 			<span id = "str">HELLO</span>
+ 		</div>
+ 		<input type="button" value="버튼1" id="btnchange"><br>
+ 		<input type="button" value="버튼2" onclick="">
+ 	</form>
+</body>
+</html>

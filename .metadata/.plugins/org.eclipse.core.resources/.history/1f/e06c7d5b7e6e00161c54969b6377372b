@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>유효성 검증하기</title>
+<script type="text/javascript">
+function send(){
+	
+//유효성 검증
+//서버에서 -> 전송 -> 결과  -> Client (x)
+//Client (javascript)
+
+//1.txtuserid 가지고 와서 값이 입력 , 입력되지 않았는지
+// form 이름(x) , <input 이름(x)
+/* document.forms[0].elements[0].value */
+ 
+//2.  form 이름(o) , <input이름(o)
+ var userid = document.Loginform.txtuserid;
+ console.log(userid.value);
+ var userpwd = document.Loginform.txtpwd;
+ console.log(userpwd.value);
+ 
+ if (userid.value=="" || !(userid.value.length >=3 && userid.value.length  <=10 )){
+		 alert("다시 입력하세요");
+ 		document.Loginform.txtuserid.focus();
+ 		userid.selecte();
+ }else{
+	 //검증 다 되었어요
+	 document.loginform.submit();
+ }
+}
+</script>
+</head>
+<body>
+<form action="Ex09_Login.jsp" method="get" name="Loginform">
+	ID: <input type="text" name="txtuserid"><br>
+	PWD :<input type="password" name="txtpwd"><br>
+	<input type="button" value="전송" onclick="send()">
+	
+	<!-- 전송  -->
+<!-- 	<input type="submit" value="전송하기"> -->
+<!--  <input type="image" src="images/noun_323320_cc.png" style="white:80px ;height: 80px"> -->
+</form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<script type="text/javascript">
+		// document.getElementById(elementId) > 단일 값
+		//document.getElementsByName(elemenName)  > name 속성 > getElements
+		//Checkbox or Radio or Select
+		
+		//document.getElementsByTagName(tagname) >  p  or li > getElements
+		
+		function getEleName(){
+			var RadioEles = document.getElementsByName("hobby");
+			//console.log(RadioEles);
+			for(var i = 0 ; i<RadioEles.length ; i++){
+				alert(RadioEles[i].getAttribute("value")+'\n'  );
+						//+RadioEles[i].innerHTML 		); 별게의 것이라 갖여올수 없음
+			}
+		}
+		function getEleTagName(){
+			var liTags = document.getElementsByTagName("li");
+			//console.log(liTags);
+			//[li , li ,li , li ,li]
+			for(var i = 0 ;i <liTags.length ; i++){
+				alert(liTags[i].getAttribute("value")+"/"+liTags[i].innerText );
+			}
+		}
+		
+</script>
+</head>
+<body>
+   <ul>
+      <li value="0">javascript</li>
+      <li value="1">dom</li>
+      <li value="2">jquery</li>
+   </ul>
+   <ul>
+      <li value="aaaa">hi</li>
+      <li value="bbbb">hello</li>
+   </ul>
+   <input type="radio" name="hobby" value="B" checked>야구<br>
+   <input type="radio" name="hobby" value="S" >축구<br>
+   <input type="radio" name="hobby" value="T" >테니스<br>
+   <hr>
+   <input type="button" value="Radioname" onclick="getEleName()"><br>
+   <input type="button" value="Radioname2" id="RadioBtn"><br>
+   <input type="button" value="Tagname" onclick="getEleTagName()"><br>
+</body>
+</html>

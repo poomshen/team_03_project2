@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//변수 생성 사용
+	//모든 변수의 타입 : var (타입은 변수가 값이 할당 시점 : 값을 받을때)
+	//자바 스크립트도 타입을 가지고 있다.(정수 , 실수 ,boolean , 문자)
+	//String , Number , Boolean, Array , Object
+	//http://www.w3schools.com/js/js_datatypes.asp
+	
+	var  a;
+	a = 100;//타입 결정(Number)
+	console.log("a 변수값 :"+a);
+	
+	var i , j;
+	i=100;
+	j=200;
+	var result = i+j;
+	console.log("result :" +result);
+	
+	var intnum = 100;//정수 타입
+	var  dnum = 12.345;//실수 타입
+	var flag = true; //boolean
+	var str = null;// 값이없다
+	var str2 = "ABC";//문자 타입
+	
+	//연산자
+	//산술 (+ , - , * ,/ ,%)
+	
+	var num1 = 10;
+	var num2 = 3;
+	document.write(num1 /num2 +"<br>");
+	document.write(num1%num2 + "<br>");
+	
+	//관계 연산자 (== , != , >= , < ........)
+	var a = 3 ;
+	var b = 5
+	document.write((a==b) +"<br>");
+	document.write((a != b)+"<br>");
+	document.write((a >b)+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

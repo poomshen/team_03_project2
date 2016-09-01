@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <script type="text/javascript">
+   var name = "";
+   var amail = false;
+   function Initvalue(){
+    name = document.myform.username.value;
+    email = document.myform.checkmail.checked;
+   }
+   function CopySend(){
+   	if(frm.copy.checked){
+   		Initvalue()
+   		document.myform.copyname.value = name;
+   		document.myform.checkmail.copykmail  = email;
+   	}else{
+   		
+   	}
+   }
+      
+   </script>
+</head>
+<body>
+<form name = "myform">
+      <fieldset>
+         <legend>주문정보</legend>
+         이름:<input type="text" name="username" ><br>
+         <input type="checkbox" name="checkmail">배송정보 Email수신<br>
+         <hr>   
+         <input type="checkbox" name="copy" onclick="CopySend()">주문자 정보와 배송지 정보 동일
+      </fieldset>
+      <hr>
+      <fieldset>
+         <legend>배송지 정보</legend>
+            이름:<input type="text" name="copyname"><br>
+                <input type="checkbox" name="copykmail">배송정보 Email수신
+      </fieldset>
+   </form>
+</body>
+</html>

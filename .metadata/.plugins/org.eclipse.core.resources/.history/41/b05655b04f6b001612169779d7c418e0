@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그연습</title>
+</head>
+<body>
+<h3> 태그 연습하기</h3>
+<ul>
+ 	<li>가 </li>
+ 	<li>나 </li>
+ 	<li>다 </li>
+ 	<li>라 </li>
+</ul>
+</body>
+</html>

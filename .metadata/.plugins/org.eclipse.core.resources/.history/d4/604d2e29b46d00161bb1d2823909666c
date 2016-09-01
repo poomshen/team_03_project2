@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>선택자(selector)</title>
+	<style type="text/css">
+		/*  
+			기본 선택자(기존에 존재하는 태그 Css) 
+			p{ color:red}
+			
+			다중 선택자
+			h1,h2,h3{ color:red}
+			
+			.사용자 정의 : 일반적( 적용 : class="mystyle")
+			.mystyle {coler :red;}
+			
+			# 사용자 정의 : 식별자 (적용 : id ="youstyle")
+			.youstyle { color : red }
+			
+			결합형태(적용 : class = "one"  ...)
+			p.one{color:red}
+			
+			자손 , 자식
+			div  p{
+			color:green ; font-family: "궁서체","명조체","광수체"' }
+			
+			
+		*/
+		div  p{
+			color:green ; font-family: "궁서체","명조체","광수체"'
+		}
+		.parent > p{
+			border : 3px double blue;
+			padding: 10px;
+			font-size:  15px;
+		}
+	</style>
+</head>
+<body>
+	<p>나는 스타일이 적용 될까요</p>
+	<div>div 태그</div>
+	
+	<h3>하위(자손) 선택자</h3>
+	<div>
+		<p>선택자</p>
+		<p>선택자2</p>
+		<div>
+		<p> 선택자3</p>
+		</div>
+	</div>
+	
+	<div class="parent">
+		<p>
+		여기?
+		
+		</p>
+	</div>
+</body>
+</html>

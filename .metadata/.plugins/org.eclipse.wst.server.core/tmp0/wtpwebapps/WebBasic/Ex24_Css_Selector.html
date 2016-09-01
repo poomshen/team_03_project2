@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>선택자(selector)</title>
+	<style type="text/css">
+		/*  
+			기본 선택자(기존에 존재하는 태그 Css) 
+			p{ color:red}
+			
+			다중 선택자
+			h1,h2,h3{ color:red}
+			
+			.사용자 정의 : 일반적( 적용 : class="mystyle")
+			.mystyle {coler :red;}
+			
+			# 사용자 정의 : 식별자 (적용 : id ="youstyle")
+			.youstyle { color : red }
+			
+			결합형태(적용 : class = "one"  ...)
+			p.one{color:red}
+			
+			자손 
+			div  p{
+			color:green ; font-family: "궁서체","명조체","광수체"' }
+			
+			자식
+				.parent > p{
+			border : 3px double blue;
+			padding: 10px;
+			font-size:  15px;
+		}
+		
+			input[type=text]{
+		 width:150px;
+		 display : block;
+		 background-color: yellow;
+		}
+		input[type=button]{
+			width:120px;
+			background-color: red;
+		}
+			
+		*/
+		div  p{
+			color:green ; font-family: "궁서체","명조체","광수체"'
+		}
+		.parent > p{
+			border : 3px double blue;
+			padding: 10px;
+			font-size:  15px;
+		}
+		input[type=text]{
+		 width:150px;
+		 display : block;
+		 background-color: yellow;
+		}
+		input[type=button]{
+			width:120px;
+			background-color: red;
+		}
+	</style>
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body  data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-26" data-genuitec-path="/WebBasic/WebContent/Ex24_Css_Selector.html">
+	<p data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-26" data-genuitec-path="/WebBasic/WebContent/Ex24_Css_Selector.html">나는 스타일이 적용 될까요</p>
+	<div>div 태그</div>
+	
+	<h3>하위(자손) 선택자</h3>
+	<div class="parent">
+		<p>선택자</p>
+		<p>선택자2</p>
+		<div>
+		<p> 선택자3</p>
+		</div>
+	</div>
+	
+	<input type="text" value="css적용">
+	<br>
+	<input type="button" value="css 버튼">
+</body>
+</html>

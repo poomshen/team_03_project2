@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수(내장)</title>
+<script type="text/javascript">
+var myvar = window.setInterval(function () {
+	myTimer()
+} ,1000);
+
+
+function myTimer() {
+	var d = new Date(); // JavaScript Date 객체( 클라이언트의 시간)
+	var t = d.toLocaleTimeString();
+	
+	document.getElementById("demo").innerHTML =t;
+}
+</script>
+</head>
+<body>
+<p id ="demo"></p>
+<button onclick="">버튼</button>
+</body>
+</html>

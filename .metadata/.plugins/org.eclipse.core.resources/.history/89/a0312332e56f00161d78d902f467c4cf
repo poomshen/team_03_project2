@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 슬라이드</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var myphotos = Array("images/1.png" ,"images/2.png","images/3.png","images/4.png")
+	}
+</script>
+</head>
+<body>
+  	<h3>DOM 슬라이드</h3>
+  	<img alt="이미지" src="images/1.png" id="imgs" width="200" height="200">
+  	<hr>
+  	<a href="#"  id="prv">이전</a> ||<a href="#" id="next">다음</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Array 활용하기</title>
+<script type="text/javascript">
+	var array =['포도' ,'사과'];
+	document.write(array.toString() + "<br>");
+	document.write(array +"/" + array.length +"<br>");
+	
+	array[2] = "바나나"; //동적 추가
+	document.write(array + "/" +array.length +"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

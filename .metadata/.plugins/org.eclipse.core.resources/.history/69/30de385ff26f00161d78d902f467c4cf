@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array 객체 다루기</title>
+<script type="text/javascript">
+		//배열 (Array)
+		//[배열 표기]
+		//{객체 표기}
+	
+		var  student = [];
+		console.log(student);
+</script>
+</head>
+<body>
+
+</body>
+</html>
