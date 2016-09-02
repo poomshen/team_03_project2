@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Audio</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+ .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+ /*      -webkit-filter: grayscale(90%); */
+      filter: grayscale(100%); /* make all photos black and white  */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+</style>
+    <script type="text/javascript">
+      
+      var flag = true;
+      var flag2 = true;
+      var flag3 = true;
+      var flag4 = true;
+      var flag5 = true;
+      var flag6 = true;
+      
+      window.onload = function(){
+         var audio1 = document.getElementById("audio1");
+         var audio2 = document.getElementById("audio2");
+         var audio3 = document.getElementById("audio3");
+         var audio4 = document.getElementById("audio4");
+         var audio5 = document.getElementById("audio5");
+         var audio6 = document.getElementById("audio6");
+         audio1.onclick = function(){
+            
+            var div = document.getElementById("div1");
+            if(flag){
+               var audio = document.createElement("audio");
+               var source = document.createElement("source");
+               var br = document.createElement("br");
+               var img = document.createElement("img");
+               audio.setAttribute("controls","controls");
+               source.setAttribute("src","../audios/pika.mp3");
+               source.setAttribute("type","audio/mpeg");
+               img.setAttribute("src", "../images/controls.PNG");
+               div.appendChild(audio).appendChild(source);
+               div.appendChild(br);
+               div.appendChild(img);
+               flag = false;   
+            }else{
+               if(div.style.display == "block"){
+                  div.style.display = "none";
+               }
+               else{
+                  div.style.display = "block";
+               }
+            }   
+         }
+      
+         
+         audio2.onclick = function(){
+            var div = document.getElementById("div2");
+            if(flag2){
+            var audio = document.createElement("audio");
+            var source = document.createElement("source");
+            var br = document.createElement("br");
+            var img = document.createElement("img");
+            audio.setAttribute("controls","controls");
+            audio.setAttribute("loop", "loop");
+            source.setAttribute("src","../audios/haha.mp3");
+            source.setAttribute("type","audio/mpeg");
+            img.setAttribute("src", "../images/conloop.PNG");
+            div.appendChild(audio).appendChild(source);
+            div.appendChild(br);
+            div.appendChild(img);
+            flag2 = false;
+            }else{
+            
+               if(div.style.display == "block"){
+                  div.style.display = "none";
+               }
+               else{
+                  div.style.display = "block";
+               
+               }
+            
+            }
+         }
+      
+         audio3.onclick = function(){
+            var div = document.getElementById("div3");
+            if(flag3){
+               var audio = document.createElement("audio");
+               var source = document.createElement("source");
+               var br = document.createElement("br");
+               var img = document.createElement("img");
+               audio.setAttribute("controls","controls");
+               audio.setAttribute("preload", "none");
+               source.setAttribute("src","../audios/haha.mp3");
+               source.setAttribute("type","audio/mpeg");
+               img.setAttribute("src", "../images/prenone.PNG");
+               div.appendChild(audio).appendChild(source);
+               div.appendChild(br);
+               div.appendChild(img);
+               flag3 = false;
+            
+            }else{
+               
+               if(div.style.display == "block"){
+                  div.style.display = "none";
+               }
+               else{
+                  div.style.display = "block";   
+               }
+            }
+         }
+         audio4.onclick = function(){
+            var div = document.getElementById("div4");
+            if(flag4){
+            var audio = document.createElement("audio");
+            var source = document.createElement("source");
+            var br = document.createElement("br");
+            var img = document.createElement("img");
+            audio.setAttribute("controls","controls");
+            audio.setAttribute("preload", "metadata");
+            source.setAttribute("src","../audios/haha.mp3");
+            source.setAttribute("type","audio/mpeg");
+            img.setAttribute("src", "../images/premeta.PNG");
+            div.appendChild(audio).appendChild(source);
+            div.appendChild(br);
+            div.appendChild(img);
+            flag4 = false;
+            }else{
+            
+               if(div.style.display == "block"){
+                  div.style.display = "none";
+               }
+               else{
+                  div.style.display = "block";
+               
+               }
+            
+            }
+         }
+         
+         audio5.onclick = function(){
+            var div = document.getElementById("div5");
+            if(flag5){
+            var audio = document.createElement("audio");
+            var source = document.createElement("source");
+            var br = document.createElement("br");
+            var img = document.createElement("img");
+            audio.setAttribute("controls","controls");
+            audio.setAttribute("preload", "auto");
+            source.setAttribute("src","../audios/haha.mp3");
+            source.setAttribute("type","audio/mpeg");
+            img.setAttribute("src", "../images/preauto.PNG");
+            div.appendChild(audio).appendChild(source);
+            div.appendChild(br);
+            div.appendChild(img);
+            flag5 = false;
+            }else{
+            
+               if(div.style.display == "block"){
+                  div.style.display = "none";
+               }
+               else{
+                  div.style.display = "block";
+               
+               }
+            
+            }
+         }
+         
+         audio6.onclick = function(){
+            var div = document.getElementById("div6");
+            if(flag6){
+            var audio = document.createElement("audio");
+            var source = document.createElement("source");
+            var br = document.createElement("br");
+            var img = document.createElement("img");
+            audio.setAttribute("autoplay","autoplay");
+            source.setAttribute("src","../audios/banana.mp3");
+            source.setAttribute("type","audio/mpeg");
+            img.setAttribute("src", "../images/auto.PNG");
+            div.appendChild(audio).appendChild(source);
+            div.appendChild(br);
+            div.appendChild(img);
+            flag6 = false;
+            }else{
+            
+               if(div.style.display == "block"){
+                  div.style.display = "none";
+               }
+               else{
+                  div.style.display = "block";
+               
+               }
+            
+            }
+         }
+         
+         
+      }
+      
+   
+   </script>
+
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-7" data-genuitec-path="/Project_Kosta/WebContent/team/audio.html">
+  <div class="container-fluid" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-7" data-genuitec-path="/Project_Kosta/WebContent/team/audio.html">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="Main.html">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Intro.html">Intro</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="JavaScriptVideo.html">JavaScriptVideo</a></li>
+<!--         <li><a href="#Audio">Audio</a></li>   오디오를 배경에 깔아도 될것 같아요-->
+        <li><a href="Plug-ins.html">Plug-ins</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">ETC
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="YouTube.html">YouTube</a></li>
+            <li><a href="YouTube2.html">YouTube2</a></li>
+            <li><a href="FileUp.html">FileUpload</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+
+ <p align = center>
+   <img src = "../images/Untitle1.png">
+   
+   <!--<br>
+   <audio autoplay>
+      <source src = "audios/banana.mp3" type = "audio/mpeg">
+      <source src = "audios/banana.wav" type = "audio/wav">
+   </audio> -->
+   <br><br>
+   <input type = "button" id = "audio6" value = "auto">
+   <input type = "button" id = "audio1" value = "control1">
+   <input type = "button" id = "audio2" value = "conloop">
+   <input type = "button" id = "audio3" value = "prenone">
+   <input type = "button" id = "audio4" value = "premeta">
+   <input type = "button" id = "audio5" value = "preauto">
+    <div align = "center" id="div1">
+   </div>
+   <div align = "center" id="div2">
+   </div>
+   <div align = "center" id="div3">
+   </div>
+   <div align = "center" id="div4">
+   </div>
+   <div align = "center" id= "div5">
+   </div>
+   <div align = "center" id= "div6">
+   </div>
+ 
+<script type="text/javascript">
+      var player = document.getElementById('player');
+      var source = document.getElementById('source');
+      //var playlists = new Array();
+      var playlists = Array("../audios/banana","../audios/haha","../audios/bono","../audios/pika2","../audios/baby");
+      var index = 0;
+      
+   /*    playlists.push("audios/banana");
+      playlists.push("audios/haha");
+      playlists.push("audios/bono");
+      playlists.push("audios/pika2");
+      playlists.push("audios/baby");
+    */   
+  
+
+
+   </script>
+</body>
+</html>
