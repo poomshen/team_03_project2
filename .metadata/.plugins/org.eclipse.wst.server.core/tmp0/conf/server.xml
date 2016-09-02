@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\kosta129\Web\Web\WebClientLab\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\kosta129\Web\Web\WebClientLab\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebBasic" path="/WebBasic" reloadable="true" source="org.eclipse.jst.jee.server:WebBasic"/><Context docBase="C:\kosta129\Web\Web\WebClientLab\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JavaScript" path="/JavaScript" reloadable="true" source="org.eclipse.jst.jee.server:JavaScript"/><Context docBase="C:\kosta129\Web\Web\WebClientLab\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Web_Jquery" path="/Web_Jquery" reloadable="true" source="org.eclipse.jst.jee.server:Web_Jquery"/></Host>
+      <Context docBase="C:\kosta129\Web\web2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\kosta129\Web\web2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Project_Kosta" path="/Project_Kosta" reloadable="true" source="org.eclipse.jst.jee.server:Project_Kosta"/></Host>
     </Engine>
   </Service>
 </Server>
