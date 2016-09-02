@@ -1,2 +1,0 @@
-INDEX VERSION 1.129+C:\kosta129\Web\web2\.metadata\.plugins\org.eclipse.jdt.core
-3725551035.index
