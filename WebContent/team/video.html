@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <title>Video</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel = "stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.12.0/themes/dot-luv/jquery-ui.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style type="text/css">
  .container {
       padding: 80px 120px;
@@ -34,9 +39,28 @@
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
+  #v1{
+  	width:360px;
+  	height:240px;
+  }
+  #div1{
+  	display : none;
+  }
 </style>
 <script type="text/javascript">
-   var flag = true;
+
+	$(function(){
+		var div = document.getElementById("div1");
+		$("#video1").click(function(){
+			if(div.style.display == "block"){
+   			 div.style.display = "none";
+             }
+             else{
+           	  div.style.display = "block";
+             }
+		});
+	});
+   /* var flag = true;
    var flag2 = true;
    var flag3 = true;
    var flag4 = true;
@@ -267,7 +291,7 @@
             }
 
    }
-</script>
+ */</script>
 </head>
 <body>
     <div class="container-fluid">
@@ -320,15 +344,21 @@
    <input type="button" id="video6" value="pre-none">
    <input type="button" id="video7" value="muted">
 
-<div align="center">
-   <div id="div1"></div>
+
+   <div id="div1" align = "center">
+   		<video id = "v1" autoplay >
+   			<source src = "../videos/aa.mp4" type = "video/mp4">
+   		</video><br>
+   		<img src = "../images/autoplay.GIF">
+   </div>
+   
    <div id="div2"></div>
    <div id="div3"></div>
    <div id="div4"></div>
    <div id="div5"></div>
    <div id="div6"></div>
    <div id="div7"></div>
-</div>
+
 </body>
   
 
