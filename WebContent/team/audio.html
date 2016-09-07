@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<!-- <link rel = "stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"> -->
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.12.0/themes/dot-luv/jquery-ui.css">
+
 <style type="text/css">
  .container {
       padding: 80px 120px;
@@ -34,196 +40,70 @@
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
+  #div1,#div2,#div3,#div4,#div5,#div6{
+  	display : none;
+  }
 </style>
     <script type="text/javascript">
+
+      $(function(){
+    	  var div = document.getElementById("div1");
+    	  var div2 = document.getElementById("div2");
+    	  var div3 = document.getElementById("div3");
+    	  var div4 = document.getElementById("div4");
+    	  var div5 = document.getElementById("div5");
+    	  var div6 = document.getElementById("div6");
+    	  
+    	 $("#audio1").click(function(){
+    		 if(div.style.display == "block"){
+    			 div.style.display = "none";
+              }
+              else{
+            	  div.style.display = "block";
+              }
+    	 });
+    	 $("#audio2").click(function(){
+    		 if(div2.style.display == "block"){
+    			 div2.style.display = "none";
+              }
+              else{
+            	  div2.style.display = "block";
+              }
+    	 });
+    	 $("#audio3").click(function(){
+    		 if(div3.style.display == "block"){
+    			 div3.style.display = "none";
+              }
+              else{
+            	  div3.style.display = "block";
+              }
+    	 });
+    	 $("#audio4").click(function(){
+    		 if(div4.style.display == "block"){
+    			 div4.style.display = "none";
+              }
+              else{
+            	  div4.style.display = "block";
+              }
+    	 });
+    	 $("#audio5").click(function(){
+    		 if(div5.style.display == "block"){
+    			 div5.style.display = "none";
+              }
+              else{
+            	  div5.style.display = "block";
+              }
+    	 });
+    	 $("#audio6").click(function(){
+    		 if(div6.style.display == "block"){
+    			 div6.style.display = "none";
+              }
+              else{
+            	  div6.style.display = "block";
+              }
+    	 });
+      });
       
-      var flag = true;
-      var flag2 = true;
-      var flag3 = true;
-      var flag4 = true;
-      var flag5 = true;
-      var flag6 = true;
-      
-      window.onload = function(){
-         var audio1 = document.getElementById("audio1");
-         var audio2 = document.getElementById("audio2");
-         var audio3 = document.getElementById("audio3");
-         var audio4 = document.getElementById("audio4");
-         var audio5 = document.getElementById("audio5");
-         var audio6 = document.getElementById("audio6");
-         audio1.onclick = function(){
-            
-            var div = document.getElementById("div1");
-            if(flag){
-               var audio = document.createElement("audio");
-               var source = document.createElement("source");
-               var br = document.createElement("br");
-               var img = document.createElement("img");
-               audio.setAttribute("controls","controls");
-               source.setAttribute("src","../audios/pika.mp3");
-               source.setAttribute("type","audio/mpeg");
-               img.setAttribute("src", "../images/controls.PNG");
-               div.appendChild(audio).appendChild(source);
-               div.appendChild(br);
-               div.appendChild(img);
-               flag = false;   
-            }else{
-               if(div.style.display == "block"){
-                  div.style.display = "none";
-               }
-               else{
-                  div.style.display = "block";
-               }
-            }   
-         }
-      
-         
-         audio2.onclick = function(){
-            var div = document.getElementById("div2");
-            if(flag2){
-            var audio = document.createElement("audio");
-            var source = document.createElement("source");
-            var br = document.createElement("br");
-            var img = document.createElement("img");
-            audio.setAttribute("controls","controls");
-            audio.setAttribute("loop", "loop");
-            source.setAttribute("src","../audios/haha.mp3");
-            source.setAttribute("type","audio/mpeg");
-            img.setAttribute("src", "../images/conloop.PNG");
-            div.appendChild(audio).appendChild(source);
-            div.appendChild(br);
-            div.appendChild(img);
-            flag2 = false;
-            }else{
-            
-               if(div.style.display == "block"){
-                  div.style.display = "none";
-               }
-               else{
-                  div.style.display = "block";
-               
-               }
-            
-            }
-         }
-      
-         audio3.onclick = function(){
-            var div = document.getElementById("div3");
-            if(flag3){
-               var audio = document.createElement("audio");
-               var source = document.createElement("source");
-               var br = document.createElement("br");
-               var img = document.createElement("img");
-               audio.setAttribute("controls","controls");
-               audio.setAttribute("preload", "none");
-               source.setAttribute("src","../audios/haha.mp3");
-               source.setAttribute("type","audio/mpeg");
-               img.setAttribute("src", "../images/prenone.PNG");
-               div.appendChild(audio).appendChild(source);
-               div.appendChild(br);
-               div.appendChild(img);
-               flag3 = false;
-            
-            }else{
-               
-               if(div.style.display == "block"){
-                  div.style.display = "none";
-               }
-               else{
-                  div.style.display = "block";   
-               }
-            }
-         }
-         audio4.onclick = function(){
-            var div = document.getElementById("div4");
-            if(flag4){
-            var audio = document.createElement("audio");
-            var source = document.createElement("source");
-            var br = document.createElement("br");
-            var img = document.createElement("img");
-            audio.setAttribute("controls","controls");
-            audio.setAttribute("preload", "metadata");
-            source.setAttribute("src","../audios/haha.mp3");
-            source.setAttribute("type","audio/mpeg");
-            img.setAttribute("src", "../images/premeta.PNG");
-            div.appendChild(audio).appendChild(source);
-            div.appendChild(br);
-            div.appendChild(img);
-            flag4 = false;
-            }else{
-            
-               if(div.style.display == "block"){
-                  div.style.display = "none";
-               }
-               else{
-                  div.style.display = "block";
-               
-               }
-            
-            }
-         }
-         
-         audio5.onclick = function(){
-            var div = document.getElementById("div5");
-            if(flag5){
-            var audio = document.createElement("audio");
-            var source = document.createElement("source");
-            var br = document.createElement("br");
-            var img = document.createElement("img");
-            audio.setAttribute("controls","controls");
-            audio.setAttribute("preload", "auto");
-            source.setAttribute("src","../audios/haha.mp3");
-            source.setAttribute("type","audio/mpeg");
-            img.setAttribute("src", "../images/preauto.PNG");
-            div.appendChild(audio).appendChild(source);
-            div.appendChild(br);
-            div.appendChild(img);
-            flag5 = false;
-            }else{
-            
-               if(div.style.display == "block"){
-                  div.style.display = "none";
-               }
-               else{
-                  div.style.display = "block";
-               
-               }
-            
-            }
-         }
-         
-         audio6.onclick = function(){
-            var div = document.getElementById("div6");
-            if(flag6){
-            var audio = document.createElement("audio");
-            var source = document.createElement("source");
-            var br = document.createElement("br");
-            var img = document.createElement("img");
-            audio.setAttribute("autoplay","autoplay");
-            source.setAttribute("src","../audios/banana.mp3");
-            source.setAttribute("type","audio/mpeg");
-            img.setAttribute("src", "../images/auto.PNG");
-            div.appendChild(audio).appendChild(source);
-            div.appendChild(br);
-            div.appendChild(img);
-            flag6 = false;
-            }else{
-            
-               if(div.style.display == "block"){
-                  div.style.display = "none";
-               }
-               else{
-                  div.style.display = "block";
-               
-               }
-            
-            }
-         }
-         
-         
-      }
-      
-   
    </script>
 
 </head>
@@ -281,20 +161,52 @@
    <input type = "button" id = "audio3" value = "prenone">
    <input type = "button" id = "audio4" value = "premeta">
    <input type = "button" id = "audio5" value = "preauto">
-    <div align = "center" id="div1">
+   
+   <div id="div1" align ="center">
+    	<audio controls>
+    		<source src = "../audios/pika.mp3" type = "audio/mpeg">
+    	</audio>
+    	<br>
+    	<img src = "../images/controls.PNG">
    </div>
-   <div align = "center" id="div2">
+   <div id="div2" align ="center">
+   		<audio controls loop>
+   			<source src = "../audios/haha.mp3" type = "audio/mpeg">
+   		</audio>
+   		<br>
+   		<img src = "../images/conloop.PNG">
    </div>
-   <div align = "center" id="div3">
-   </div>
-   <div align = "center" id="div4">
-   </div>
-   <div align = "center" id= "div5">
-   </div>
-   <div align = "center" id= "div6">
-   </div>
- 
-<script type="text/javascript">
+
+	<div id="div3" align ="center">
+		<audio controls preload = "none">
+			<source src="../audios/bono.mp3" type="audio/mpeg">
+		</audio>
+		<br>
+		<img src="../images/prenone.PNG">
+	</div>
+	<div id="div4" align ="center">
+		<audio controls preload="metadata">
+			<source src="../audios/baby.mp3" type="audio/mpeg">
+		</audio>
+		<br>
+		<img src="../images/premeta.PNG">
+	</div>
+	<div id="div5" align ="center">
+		<audio controls preload="auto">
+			<source src="../audios/pika2.mp3" type="audio/mpeg">
+		</audio>
+		<br>
+		<img src="../images/preauto.PNG">
+	</div>
+	<div id="div6" align ="center">
+		<audio autoplay>
+			<source src="../audios/banana.mp3" type="audio/mpeg">
+		</audio>
+		<br>
+		<img src="../images/auto.PNG">
+	</div>
+
+	<script type="text/javascript">
       var player = document.getElementById('player');
       var source = document.getElementById('source');
       //var playlists = new Array();
