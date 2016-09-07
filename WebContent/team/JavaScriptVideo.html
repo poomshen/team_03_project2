@@ -131,10 +131,10 @@
 	<div class="panel panel-default">
   			<div class="panel-heading">컨트롤 박스</div>
   			<div class="panel-body" style="height:51px">
-  				<input type="image" src="../images/play.jpg" id="btn" onclick="playPause()">&nbsp;
-        		<input type="image" src="../images/off.jpg" id="btn2" onclick="volMute()">&nbsp;
-        		<input type="image" id="prv" src="../images/prv.jpg">&nbsp;
-      			<input type="image" id="next" src="../images/next.jpg">
+  				<input type="image" src="../images/play.png" id="btn" onclick="playPause()">&nbsp;
+        		<input type="image" src="../images/off.png" id="btn2" onclick="volMute()">&nbsp;
+        		<input type="image" id="prv" src="../images/prv.png">&nbsp;
+      			<input type="image" id="next" src="../images/next.png">
   			</div>
 		</div>	       
     </div>
@@ -324,20 +324,20 @@ function listPlay(listindex){
 function playPause() {
     if (player.paused) {
         player.play();
-       document.getElementById("btn").setAttribute("src", "../images/stop.jpg");
+       document.getElementById("btn").setAttribute("src", "../images/stop.png");
    } else {
         player.pause();
-       document.getElementById("btn").setAttribute("src", "../images/play.jpg");
+       document.getElementById("btn").setAttribute("src", "../images/play.png");
    }
 }
 
 function volMute() {
    if (player.muted == true) {
       player.muted = false;
-      document.getElementById("btn2").setAttribute("src", "../images/off.jpg");
+      document.getElementById("btn2").setAttribute("src", "../images/off.png");
    } else {
       player.muted = true;
-      document.getElementById("btn2").setAttribute("src", "../images/on.jpg");
+      document.getElementById("btn2").setAttribute("src", "../images/on.png");
    }
 } 
 
