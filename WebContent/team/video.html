@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <title>Video</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel = "stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+   href="https://code.jquery.com/ui/1.12.0/themes/dot-luv/jquery-ui.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style type="text/css">
  .container {
       padding: 80px 120px;
@@ -34,9 +39,99 @@
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
+  #v1,#v2,#v3,#v4,#v5,#v6,#v7{
+     width:360px;
+     height:240px;
+  }
+  #div1,#div2,#div3,#div4,#div5,#div6,#div7{
+     display : none;
+  }
 </style>
 <script type="text/javascript">
-   var flag = true;
+
+   $(function(){
+      var div = document.getElementById("div1");
+      var div2 = document.getElementById("div2");
+      var div3 = document.getElementById("div3");
+      var div4 = document.getElementById("div4");
+      var div5 = document.getElementById("div5");
+      var div6 = document.getElementById("div6");
+      var div7 = document.getElementById("div7");
+      
+      //autoplay
+      $("#video1").click(function(){
+         if(div.style.display == "block"){
+             div.style.display = "none";
+             }
+             else{
+                div.style.display = "block";
+             }
+      }); 
+      
+      //loop
+      $("#video2").click(function(){
+          if(div.style.display == "block"){
+              div.style.display = "none";
+              }
+              else{
+                 div.style.display = "block";
+              }
+       });
+      
+      //poster
+      $("#video3").click(function(){
+          if(div.style.display == "block"){
+              div.style.display = "none";
+              }
+              else{
+                 div.style.display = "block";
+              }
+       });
+      
+	  //pre-auto
+      $("#video4").click(function(){
+          if(div.style.display == "block"){
+              div.style.display = "none";
+              }
+              else{
+                 div.style.display = "block";
+              }
+       });
+
+	  //pre-matadata
+      $("#video5").click(function(){
+          if(div.style.display == "block"){
+              div.style.display = "none";
+              }
+              else{
+                 div.style.display = "block";
+              }
+       });
+
+	  //pre-none
+      $("#video6").click(function(){
+          if(div.style.display == "block"){
+              div.style.display = "none";
+              }
+              else{
+                 div.style.display = "block";
+              }
+       });
+
+	  //mute
+      $("#video7").click(function(){
+          if(div.style.display == "block"){
+              div.style.display = "none";
+              }
+              else{
+                 div.style.display = "block";
+              }
+       });
+      
+      
+      
+   });
+   /* var flag = true;
    var flag2 = true;
    var flag3 = true;
    var flag4 = true;
@@ -45,14 +140,6 @@
    var flag7 = true;
    
    window.onload = function() {
-      var video1 = document.getElementById("video1");
-      var video2 = document.getElementById("video2");
-      var video3 = document.getElementById("video3");
-      var video4 = document.getElementById("video4");
-      var video5 = document.getElementById("video5");
-      var video6 = document.getElementById("video6");
-      var video7 = document.getElementById("video7");
-         
 
       //autoplay
       video1.onclick = function() {
@@ -85,7 +172,7 @@
          }
          
          
-      }
+      } 
       
         //loop
          video2.onclick = function() {
@@ -267,8 +354,9 @@
             }
 
    }
-</script>
+ */</script>
 </head>
+
 <body>
     <div class="container-fluid">
     <div class="navbar-header">
@@ -291,7 +379,7 @@
             <li><a href="video.html">Video</a></li>
             <li><a href="audio.html">Audio</a></li>
             <li><a href="JavaScriptVideo.html">JavaScriptVideo</a></li>
-      		  <li><a href="Plug-ins.html">Plug-ins</a></li>
+              <li><a href="Plug-ins.html">Plug-ins</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -320,18 +408,49 @@
    <input type="button" id="video6" value="pre-none">
    <input type="button" id="video7" value="muted">
 
-<div align="center">
-   <div id="div1"></div>
-   <div id="div2"></div>
-   <div id="div3"></div>
-   <div id="div4"></div>
-   <div id="div5"></div>
-   <div id="div6"></div>
-   <div id="div7"></div>
-</div>
+<!-- 
+   <div id="div1" align = "center">
+         <video id = "v1" controls autoplay >
+            <source src = "../videos/aa.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/autoplay.GIF">
+   </div> -->
+   
+   <!-- 사진 문제   -->
+   <div id="div2">
+   		<video id = "v2" loop="loop">
+            <source src = "../videos/bb.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/loop.GIF">
+   </div>
+   
+   <div id="div3">
+   		<video id = "v3" controls poster="../images/Untitled-2 copy.png">
+            <source src = "../videos/aa.mp4" type = "video/mp4">      
+         </video><br>
+         <img src = "../images/controls.PNG">
+   </div>
+   
+   <div id="div4">
+   
+   </div>
+   
+   <div id="div5">
+   
+   </div>
+   
+   <div id="div6">
+   
+   </div>
+   
+   <div id="div7">
+   
+   </div>
+   
+
 </body>
   
 
   
-    	
+       
 </html>
