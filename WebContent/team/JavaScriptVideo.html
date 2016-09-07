@@ -80,19 +80,30 @@
   </div>
 
 <br>
- <div style="clear: both; " align="center">
- <audio id = "player2" controls="controls"  preload="auto">
-    <source id = "source2" src="" type="audio/mpeg" />  
-  </audio>
-  <br>
-  <input type = "button" id = "prv2" value = "prev"  onclick="load2_proc2()">
-  <input type = "button" onclick = "doPlay()" value = "start">
-  <input type = "button" onclick = "doPause()" value = "pause">
-  <input type = "button" id ="next2" value = "next" onclick="load2_proc()">
-  <br>
-  <br>
- </div>
-  <hr>
+	<div class="row text-center">
+		<div class="col-sm-8">
+			<div style="clear: both;" align="center">
+				<audio id="player2" controls="controls" preload="auto">
+					<source id="source2" src="" type="audio/mpeg" />
+				</audio>
+				<br> <input type="button" id="prv2" value="prev"
+					onclick="load2_proc2()"> <input type="button"
+					onclick="doPlay()" value="start"> <input type="button"
+					onclick="doPause()" value="pause"> <input type="button"
+					id="next2" value="next" onclick="load2_proc()"> <br> <br>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="list-group2" style="width: 200px">
+				<a href="#" class="list-group-item active"> 플레이 리스트 </a> <a href="#"
+					onclick="listPlay2(0)" class="list-group-item">오디오1</a> <a href="#"
+					onclick="listPlay2(1)" class="list-group-item">오디오2</a> <a href="#"
+					onclick="listPlay2(2)" class="list-group-item">오디오3</a> <a href="#"
+					onclick="listPlay2(3)" class="list-group-item">오디오4</a>
+			</div>
+		</div>
+	</div>
+	<hr>
   
 <!-- 비디오 부분 -->
 <div class="row text-center">
@@ -208,7 +219,11 @@
           return returnVal;
       }
 
-
+      function listPlay2(listindex){
+    		index=listindex;
+    	   player.setAttribute("src", playlist2[index] + ".mp3");
+    	   player.autoplay=true;
+    	}
       function load2_proc(){
 
          if(player2.canPlayType("audio/mpeg")!=""){
@@ -268,9 +283,7 @@ player.onended = function() {
    index++;
    if (index>=playlist.length) {
 	      index=0;
-	   } else {
-		   
-	   }
+	   } 
    player.setAttribute("src", playlist[index]);
    player.autoplay=true;
 };
