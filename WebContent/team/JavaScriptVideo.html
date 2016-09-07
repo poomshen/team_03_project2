@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>JavaScriptVideo</title>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
- .container {
-      padding: 80px 120px;
-  }
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.7;
-  }
-  .person:hover {
-      border-color: #f1f1f1;
-  }
-  .carousel-inner img {
- /*      -webkit-filter: grayscale(90%); */
-      filter: grayscale(100%); /* make all photos black and white  */
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-  }
-  .carousel-caption h3 {
-      color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  
-  input[type=image]{
-      background-color: purple;
-      height: 30px;
-   }
-</style>
+	<meta charset="UTF-8">
+	<title>JavaScriptVideo</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+ 		.container {
+      		padding: 80px 120px;
+  		}
+  		.person {
+      		border: 10px solid transparent;
+      		margin-bottom: 25px;
+      		width: 80%;
+      		height: 80%;
+      		opacity: 0.7;
+  		}
+  		.person:hover {
+      		border-color: #f1f1f1;
+  		}
+  		.carousel-inner img {
+ 		/* -webkit-filter: grayscale(90%); */
+ 		     filter: grayscale(100%); /* make all photos black and white  */
+      		width: 100%; /* Set width to 100% */
+  	    	margin: auto;
+  		}
+  		.carousel-caption h3 {
+      		color: #fff !important;
+  		}
+  		@media (max-width: 600px) {
+    		.carousel-caption {
+      			display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    		}
+  		}
+  		input[type=image]{
+      		background-color: purple;
+    	  	height: 30px;
+   		}
+	</style>
 </head>
 <body>
    <div class="container-fluid">
@@ -93,67 +92,85 @@
   <br>
   <br>
  </div>
-  
   <hr>
-<div id="wrapper">
-<div style="text-align:center"> 
-  <video id="player" width="420" controls="true">
-    <source src="../videos/aa.mp4" type="video/mp4">
-     저런! 당신의 브라우저가 HTML5를 지원하지 않습니다! 
-  </video>
-</div>
   
- <div style="float: left; margin-right: 45%; ">&nbsp;</div>
-<div id="line1" >
-   <div style="float:left;">
-        <input type="image" src="../images/play.jpg" id="btn" onclick="playPause()" >&nbsp;&nbsp;
-   </div>
+<!-- 비디오 부분 -->
+<div class="row text-center">
+	<div class="col-sm-8">
+		<video id="player" width="420" controls="true">
+  		<source src="../videos/aa.mp4" type="video/mp4">
+     		저런! 당신의 브라우저가 HTML5를 지원하지 않습니다! 
+		</video>
+	</div>
+	<div class="col-sm-4" id="plist">
+		<div class="list-group" style="width:200px">
+  			<a href="#" class="list-group-item active">
+    			플레이 리스트
+  			</a>
+  			<a href="#" onclick="listPlay(0)" class="list-group-item">동영상1</a>
+  			<a href="#" onclick="listPlay(1)" class="list-group-item">동영상2</a>
+  			<a href="#" onclick="listPlay(2)" class="list-group-item">동영상3</a>
+  			<a href="#" onclick="listPlay(3)" class="list-group-item">동영상4</a>
+		</div>
+	</div>
 </div>
- 
-<div id="line2" >
-     <div style="float:left;">
-        <input type="image" src="../images/off.jpg" id="btn2" onclick="volMute()">&nbsp;&nbsp;
-   </div>
-</div>
-   
-   <div id="line7" >
-     <div style="float:left;">
-        <input type="image" id="prv" src="../images/prv.jpg">&nbsp;
-      <input type="image" id="next" src="../images/play.jpg">
-   </div>      
-</div>
-
-<div id="line3" style="clear:both; ">
- <div style="float: left; margin-right: 32%; ">&nbsp;</div>
-     <div style="float:left;">   
-음량조절 <input type="range" id="volumebar" step="0.1" value="1" min="0" max="1" onchange="volSet()">
-   </div>
-</div>
- <div style="float: left; margin-right: 10%; ">&nbsp;</div>
-<div id="line4"  >
-     <div style="float:left;">   
-재생속도조절 <input type="range" id="speed" step="0.5" value="1" min="0" max="2" onchange="spdSet()">
-   </div>      
-</div>
-<div id="line5" style="clear:both;">
 <br>
- <div style="float: left; margin-right: 35%; ">&nbsp;</div>
-     <div style="float:left;">   
-동영상 전체 시간 <input type="text" id="time" onmouseup="viewTime()">초
-   </div>      
-</div>
-<div id="line6" style="clear:both;">
-<br>
- <div style="float: left; margin-right: 35%; ">&nbsp;</div>
-     <div style="float:left;">   
-동영상 재생시작 시간<input type="text" id="start" onmouseup="viewRunTime()">초<br>
-동영상 재생종료 시간<input type="text" id="end" onmouseup="viewRunTime()">초
-   </div>      
+<div class="clearfix row text-center">
+	<div class="col-md-4">
+	<div class="panel panel-default">
+  			<div class="panel-heading">컨트롤 박스</div>
+  			<div class="panel-body" style="height:51px">
+  				<input type="image" src="../images/play.jpg" id="btn" onclick="playPause()">&nbsp;
+        		<input type="image" src="../images/off.jpg" id="btn2" onclick="volMute()">&nbsp;
+        		<input type="image" id="prv" src="../images/prv.jpg">&nbsp;
+      			<input type="image" id="next" src="../images/play.jpg">
+  			</div>
+		</div>	       
+    </div>
+    <div class="col-md-4">
+    	<div class="panel panel-default">
+  			<div class="panel-heading">음량 조절</div>
+  			<div class="panel-body">
+  				<input type="range" id="volumebar" step="0.1" value="1" min="0" max="1" onchange="volSet()">
+  			</div>
+		</div>
+   	</div>
+   	<div class="col-md-4">
+   		<div class="panel panel-default">
+  			<div class="panel-heading">재생속도 조절</div>
+  			<div class="panel-body">
+  				<input type="range" id="speed" step="0.5" value="1" min="0" max="2" onchange="spdSet()">
+  			</div>
+		</div>		  
+   	</div>	
 </div>
 
+<div class="clearfix row text-center">
+	 <div class="col-md-4">
+	 	<div class="panel panel-default">
+	 		<div class="panel-heading">동영상 전체 시간</div>
+  			<div class="panel-body">
+  				<input type="text" id="time" onmouseup="viewTime()">초
+  			</div>	 	 
+	 	</div>    
+	 </div>  
+     <div class="col-md-4"> 
+     	<div class="panel panel-default">
+	 		<div class="panel-heading">동영상 재생시작 시간</div>
+  			<div class="panel-body">
+  				<input type="text" id="start" onmouseup="viewRunTime()">초
+  			</div>	 	 
+	 	</div>  
+	 </div>
+	 <div class="col-md-4">
+	 	<div class="panel panel-default">
+	 		<div class="panel-heading">동영상 재생종료 시간</div>
+  			<div class="panel-body">
+  				<input type="text" id="end" onmouseup="viewRunTime()">초
+  			</div>	 	 
+	 	</div>  
+   	 </div>      
 </div>
-
-
   
 
 </body>
@@ -239,9 +256,10 @@
    
    </script>
 
+<!-- 비디오 플레이어 -->
 <script>
 var player = document.getElementById("player");
-var playlist=Array("../videos/aa.mp4", "../videos/bb.mp4", "../videos/aa.mp4", "../videos/bb.mp4");
+var playlist=Array("../videos/aa.mp4", "../videos/bb.mp4", "../videos/cc.mp4", "../videos/dd.mp4");
 var index=0;
 
 var index3=0;
@@ -270,6 +288,14 @@ prv.onclick=function(){
    }
    document.getElementById("player").setAttribute("src", playlist[index]);
    index=index-1;
+}
+
+//리스트의 영상 플레이 함수
+function listPlay(listindex){
+   player.setAttribute("src", playlist[listindex]);
+   player.autoplay=true;
+   $('#plist>div').children().eq()
+   //console.log($('#plist>div').children().eq(listindex+1)); //>>>>>??????????
 }
 
 function playPause() {
