@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
+
 <title>Intro</title>
   	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,6 +12,10 @@
 <style type="text/css">
  .container {
       padding: 80px 120px;
+  }
+  img {
+  	max-width:100%;
+  	height:auto;
   }
   .person {
       border: 10px solid transparent;
@@ -36,6 +42,77 @@
     }
   }
 </style>
+<script type="text/javascript">
+$(function() {
+    $.widget("custom.catcomplete", $.ui.autocomplete, {
+       _create : function() {
+          this._super();
+          this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+       },
+       _renderMenu : function(ul, items) {
+          var that = this,
+             currentCategory = "";
+          $.each(items, function(index, item) {
+             var li;
+             if (item.category != currentCategory) {
+                ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                currentCategory = item.category;
+             }
+             li = that._renderItemData(ul, item);
+             if (item.category) {
+                li.attr("aria-label", item.category + " : " + item.label);
+             }
+          });
+       }
+    });
+
+    var data = [
+                { label: "Video", category: "Media" },
+                { label: "Audio", category: "Media" },
+                { label: "JavaScriptVideo", category: "Media" },
+                { label: "YouTube", category: "ETC" },
+                { label: "YouTube2", category: "ETC" }
+              ];
+
+    $("#search").catcomplete({
+       delay : 0,
+       source : data
+    });
+
+ });
+
+
+
+function send() {
+ var psearch = $("#search").val();
+
+
+ if (psearch == "Video") {
+	 location.href = "video.html";
+    
+ }
+
+ if (psearch == "Audio") {
+	 location.href = "audio.html";
+    
+ }
+
+ if (psearch == "JavaScriptVideo") {
+	 location.href = "JavaScriptVideo.html";
+    
+ }
+
+ if (psearch == "YouTube") {
+	 location.href = "YouTube.html";
+    
+ }
+
+ if (psearch == "YouTube2") {
+	 location.href = "YouTube2.html";
+    
+ }
+}
+</script>
    <style type="text/css">
       th {text-align:center;}
    </style>
@@ -54,7 +131,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Main.html">Main</a></li>
         <li><a href="Intro.html">Intro</a></li>
-        <li><a href="board.html">Board</a></li>
+        <li><a href="#">Board</a></li>
           <li class="dropdown">
          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media
           <span class="caret"></span></a>
@@ -74,12 +151,13 @@
             <li><a href="FileUp.html">FileUpload</a></li>
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+               <li><input type = "text" size = "10" style = "margin:11px" id = "search"></li>
+        <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="send(); return false"></span></a></li>
       </ul>
     </div>
   </div>
   
-<img src = "../images/Untitle1.png">
+<!-- <img src = "../images/Untitle1.png"> -->
 <div id="wrapper" style="margin-left:20%;margin-right:20%;margin-bottom:3%;">
 <br>
 <div id="methods">

@@ -12,6 +12,10 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style type="text/css">
+ img {
+ 	max-width:80%;
+ 	height:auto;
+ }
  .container {
       padding: 80px 120px;
   }
@@ -165,6 +169,77 @@
    });
 
  </script>
+ <script type="text/javascript">
+$(function() {
+    $.widget("custom.catcomplete", $.ui.autocomplete, {
+       _create : function() {
+          this._super();
+          this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+       },
+       _renderMenu : function(ul, items) {
+          var that = this,
+             currentCategory = "";
+          $.each(items, function(index, item) {
+             var li;
+             if (item.category != currentCategory) {
+                ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                currentCategory = item.category;
+             }
+             li = that._renderItemData(ul, item);
+             if (item.category) {
+                li.attr("aria-label", item.category + " : " + item.label);
+             }
+          });
+       }
+    });
+
+    var data = [
+                { label: "Video", category: "Media" },
+                { label: "Audio", category: "Media" },
+                { label: "JavaScriptVideo", category: "Media" },
+                { label: "YouTube", category: "ETC" },
+                { label: "YouTube2", category: "ETC" }
+              ];
+
+    $("#search").catcomplete({
+       delay : 0,
+       source : data
+    });
+
+ });
+
+
+
+function send() {
+ var psearch = $("#search").val();
+
+
+ if (psearch == "Video") {
+	 location.href = "video.html";
+    
+ }
+
+ if (psearch == "Audio") {
+	 location.href = "audio.html";
+    
+ }
+
+ if (psearch == "JavaScriptVideo") {
+	 location.href = "JavaScriptVideo.html";
+    
+ }
+
+ if (psearch == "YouTube") {
+	 location.href = "YouTube.html";
+    
+ }
+
+ if (psearch == "YouTube2") {
+	 location.href = "YouTube2.html";
+    
+ }
+}
+</script>
 </head>
 
 <body>
@@ -181,7 +256,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Main.html">Main</a></li>
         <li><a href="Intro.html">Intro</a></li>
-        <li><a href="board.html">Board</a></li>
+        <li><a href="#">Board</a></li>
           <li class="dropdown">
          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media
           <span class="caret"></span></a>
@@ -201,22 +276,23 @@
             <li><a href="FileUp.html">FileUpload</a></li>
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                <li><input type = "text" size = "10" style = "margin:11px" id = "search"></li>
+        <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="send(); return false"></span></a></li>
       </ul>
     </div>
   </div>
   
    <p align = center>
-  <img src = "../images/Untitled-1.png" >
+  <!-- <img src = "../images/Untitled-1.png" > -->
   <br>
   <br>
-   <input type="button" id="video1" value="autoplay">
-   <input type="button" id="video2" value="loop">
-   <input type="button" id="video3" value="poster">
-   <input type="button" id="video4" value="pre-auto">
-   <input type="button" id="video5" value="pre-metadata">
-   <input type="button" id="video6" value="pre-none">
-   <input type="button" id="video7" value="muted">
+   <input type="button" id="video1" value="autoplay" class = "btn btn-danger">
+   <input type="button" id="video2" value="loop" class = "btn btn-danger">
+   <input type="button" id="video3" value="poster" class = "btn btn-danger">
+   <input type="button" id="video4" value="pre-auto" class = "btn btn-danger">
+   <input type="button" id="video5" value="pre-metadata" class = "btn btn-danger">
+   <input type="button" id="video6" value="pre-none" class = "btn btn-danger">
+   <input type="button" id="video7" value="muted" class = "btn btn-danger">
 
 
 

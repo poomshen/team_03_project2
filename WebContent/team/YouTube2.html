@@ -47,6 +47,77 @@
         height: 100%;
       }
     </style>
+    <script type="text/javascript">
+$(function() {
+    $.widget("custom.catcomplete", $.ui.autocomplete, {
+       _create : function() {
+          this._super();
+          this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+       },
+       _renderMenu : function(ul, items) {
+          var that = this,
+             currentCategory = "";
+          $.each(items, function(index, item) {
+             var li;
+             if (item.category != currentCategory) {
+                ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                currentCategory = item.category;
+             }
+             li = that._renderItemData(ul, item);
+             if (item.category) {
+                li.attr("aria-label", item.category + " : " + item.label);
+             }
+          });
+       }
+    });
+
+    var data = [
+                { label: "Video", category: "Media" },
+                { label: "Audio", category: "Media" },
+                { label: "JavaScriptVideo", category: "Media" },
+                { label: "YouTube", category: "ETC" },
+                { label: "YouTube2", category: "ETC" }
+              ];
+
+    $("#search").catcomplete({
+       delay : 0,
+       source : data
+    });
+
+ });
+
+
+
+function send() {
+ var psearch = $("#search").val();
+
+
+ if (psearch == "Video") {
+	 location.href = "video.html";
+    
+ }
+
+ if (psearch == "Audio") {
+	 location.href = "audio.html";
+    
+ }
+
+ if (psearch == "JavaScriptVideo") {
+	 location.href = "JavaScriptVideo.html";
+    
+ }
+
+ if (psearch == "YouTube") {
+	 location.href = "YouTube.html";
+    
+ }
+
+ if (psearch == "YouTube2") {
+	 location.href = "YouTube2.html";
+    
+ }
+}
+</script>
   </head>
   <body>
      <div class="container-fluid">
@@ -62,7 +133,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Main.html">Main</a></li>
         <li><a href="Intro.html">Intro</a></li>
-        <li><a href="board.html">Board</a></li>
+        <li><a href="#">Board</a></li>
           <li class="dropdown">
          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media
           <span class="caret"></span></a>
@@ -82,7 +153,8 @@
             <li><a href="FileUp.html">FileUpload</a></li>
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+               <li><input type = "text" size = "10" style = "margin:11px" id = "search"></li>
+        <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="send(); return false"></span></a></li>
       </ul>
     </div>
   </div>
@@ -98,8 +170,8 @@
 
     <!-- 움직이는 화면 들 -->
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
-      <iframe width="1200" height="500" src="https://www.youtube.com/embed/erErBFKPbMY?autoplay=1"
+      <div class="item active embed-responsive embed-responsive-16by9">
+      <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/erErBFKPbMY?autoplay=1"
   			 frameborder="0" allowfullscreen></iframe>
    		<div class="carousel-caption">
         </div>
@@ -108,8 +180,8 @@
           <br>실행 구문:   src = "주소?autoplay=1"</p>
         </div>
 
-      <div class="item">
-   		 <iframe width="1200" height="500" src="https://www.youtube.com/embed/erErBFKPbMY"
+      <div class="item embed-responsive embed-responsive-16by9">
+   		 <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/erErBFKPbMY"
   			 frameborder="0" allowfullscreen></iframe>
         <div class="carousel-caption">
         </div>
@@ -118,8 +190,8 @@
           <br>실행 구문 :  src = "주소"</p>
       </div>
       
-      <div class="item">
-      <iframe width="1200" height="500" src="https://www.youtube.com/embed/erErBFKPbMY?playlist=erErBFKPbMY&loop=1"
+      <div class="item embed-responsive embed-responsive-16by9">
+      <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/erErBFKPbMY?playlist=erErBFKPbMY&loop=1"
   			 frameborder="0" allowfullscreen></iframe>
         <div class="carousel-caption">
         </div>
@@ -128,8 +200,8 @@
           <br>실행 구문:   src = "주소?playlist=XGSy3_Czz8k&loop=1"</p>
       </div>
       
-      <div class="item">
-      <iframe width="1200" height="500" src="https://www.youtube.com/embed/erErBFKPbMY?controls=0"
+      <div class="item embed-responsive embed-responsive-16by9">
+      <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/erErBFKPbMY?controls=0"
   			 frameborder="0" allowfullscreen></iframe>
         <div class="carousel-caption">
         </div>
