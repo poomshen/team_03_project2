@@ -53,9 +53,8 @@
     	  var div4 = document.getElementById("div4");
     	  var div5 = document.getElementById("div5");
     	  var div6 = document.getElementById("div6");
-    	  
+    	  var audio = document.getElementById("a6");
     	 $("#audio1").click(function(){
-     		 
     		 if(div.style.display == "block"){
     			 div.style.display = "none";
               }
@@ -96,17 +95,17 @@
               }
     	 });
     	 $("#audio6").click(function(){
-    		 var audio = document.getElementById("a1"); 
     		 if(div6.style.display == "block"){
     			 div6.style.display = "none";
+    			 audio.autoplay = false;
+    			 audio.muted = true;
     			 
-    			 audio.muted=true;
               }
               else{
             	  div6.style.display = "block";
+            	  audio.muted = false;
             	  audio.autoplay = true;
             	  audio.load();
-            	  audio.muted=false;
               }
     	 });
       });
@@ -206,7 +205,7 @@
 		<img src="../images/preauto.PNG">
 	</div>
 	<div id="div6" align ="center">
-		<audio id="a1" >
+		<audio id = "a6">
 			<source src="../audios/banana.mp3" type="audio/mpeg">
 		</audio>
 		<br>
