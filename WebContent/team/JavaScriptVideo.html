@@ -89,16 +89,8 @@
 			</div>
 		</div>
 		<div class="col-sm-4">
-<<<<<<< HEAD
 			<div class="list-group" style="width: 200px">
-=======
-			<div class="list-group2" style="width: 200px">
-				<a href="#" class="list-group-item active"> 플레이 리스트 </a> <a href="#"
-					onclick="listPlay2(0)" class="list-group-item">오디오1</a> <a href="#"
-					onclick="listPlay2(1)" class="list-group-item">오디오2</a> <a href="#"
-					onclick="listPlay2(2)" class="list-group-item">오디오3</a> <a href="#"
-					onclick="listPlay2(3)" class="list-group-item">오디오4</a>
->>>>>>> 0f9c2c6ac4369b41c13d0e8cc385d25e08137a91
+
 				<a href="#" class="list-group-item active"> 플레이 리스트 </a> 
 				<a href="#" onclick="listPlay2(0)" class="list-group-item">오디오1</a> 
 				<a href="#" onclick="listPlay2(1)" class="list-group-item">오디오2</a> 
@@ -108,6 +100,8 @@
 			</div>
 		</div>
 	</div>
+
+	
 	<hr>
   
 <!-- 비디오 부분 -->
@@ -196,8 +190,7 @@
       var playlist2 = Array("../audios/banana.mp3","../audios/haha.mp3","../audios/bono.mp3","../audios/pika2.mp3","../audios/baby.mp3");
       var index2 = 0;
      
-      
-<<<<<<< HEAD
+     
       //끝나면 다음 오디오 자동 재생
       player2.onended = function() {
          index2++;
@@ -207,42 +200,6 @@
          player2.setAttribute("src", playlist2[index2]);
          player2.autoplay=true;
       };
-=======
-      function doPlay(){
-          var obj = document.getElementById("player2");
-          obj.play();
-       }
-      function doPause(){
-          var obj = document.getElementById("player2");
-          obj.pause();
-      }
-
-
-      function getItem(){
-          var returnVal = playlists2[index2];
-          if(++index2>playlists2.length-1){
-             index2 = 0;
-         }
-          return returnVal;
-      }
-      function getItem2(){
-          var returnVal = playlists2[index2];
-           if (index2-- == -1) {
-                index2 = playlists2.length;
-           }
-          return returnVal;
-      }
-
-      function listPlay2(listindex){
-    		index=listindex;
-    	   player.setAttribute("src", playlist2[index] + ".mp3");
-    	   player.autoplay=true;
-    		index2=listindex;
-    	   source2.setAttribute("src", playlist2[index2] + ".mp3");
-    	   source2.autoplay=true;
-    	}
-      function load2_proc(){
->>>>>>> 0f9c2c6ac4369b41c13d0e8cc385d25e08137a91
 
 	//오디오 플레이리스트 
 	function listPlay2(listindex) {
