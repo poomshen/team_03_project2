@@ -67,7 +67,6 @@
          if(div.style.display == "block"){
              div.style.display = "none";
              video.muted=true;
- 
              }
              else{
                 div.style.display = "block";
@@ -79,61 +78,85 @@
       
       //loop
       $("#video2").click(function(){
+    	  var video2 = document.getElementById("v2")
           if(div2.style.display == "block"){
               div2.style.display = "none";
+              video2.muted=true;
               }
               else{
                  div2.style.display = "block";
+                 video2.load();
+                 video2.muted=false;
               }
        });
       
       //poster
       $("#video3").click(function(){
+    	  var video3 = document.getElementById("v3")
           if(div3.style.display == "block"){
               div3.style.display = "none";
+              video3.muted=true;
               }
               else{
                  div3.style.display = "block";
+                 video3.load();
+                 video3.muted=false;
               }
        });
       
 	  //pre-auto
       $("#video4").click(function(){
+    	  var video4 = document.getElementById("v4")
           if(div4.style.display == "block"){
               div4.style.display = "none";
+              video4.muted=true;
               }
               else{
                  div4.style.display = "block";
+                 video4.load();
+                 video4.muted=false;
               }
        });
 
 	  //pre-matadata
       $("#video5").click(function(){
+    	  var video5 = document.getElementById("v5")
           if(div5.style.display == "block"){
               div5.style.display = "none";
+              video5.muted=true;
               }
               else{
                  div5.style.display = "block";
+                 video5.load();
+                 video5.muted=false;
               }
        });
 
 	  //pre-none
       $("#video6").click(function(){
+    	  var video6 = document.getElementById("v6")
           if(div6.style.display == "block"){
               div6.style.display = "none";
+              video6.muted=true;
               }
               else{
                  div6.style.display = "block";
+                 video6.load();
+                 video6.muted=false;
               }
        });
 
 	  //mute
       $("#video7").click(function(){
+    	  var video7 = document.getElementById("v7")
           if(div7.style.display == "block"){
               div7.style.display = "none";
+              video7.muted=true;
               }
               else{
                  div7.style.display = "block";
+                 video7.load();
+                 video7.muted=false;
               }
        });
       
@@ -427,7 +450,7 @@
          <img src = "../images/autoplay.GIF">
    </div> 
    
-   <!-- 사진 문제   -->
+ 
    <div id="div2" align = "center">
    		<video id = "v2" loop="loop">
             <source src = "../videos/bb.mp4" type = "video/mp4">
@@ -439,7 +462,7 @@
    		<video id = "v3" controls poster="../images/Untitled-2 copy.png">
             <source src = "../videos/aa.mp4" type = "video/mp4">      
          </video><br>
-         <img src = "../images/controls.PNG">
+         <img src = "../images/poster.GIF">
    </div>
    
    <div id="div4" align = "center">
@@ -469,17 +492,6 @@
          </video><br>
          <img src = "../images/muted.GIF">
    </div>
-
-<!--    <div id="div1" align = "center">
-   		<video id = "v1" autoplay >
-   			<source src = "../videos/aa.mp4" type = "video/mp4">
-   		</video><br>
-   		<img src = "../images/autoplay.GIF">
-   </div> -->
    
 </body>
-  
-
-  
-       
 </html>
