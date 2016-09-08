@@ -83,23 +83,20 @@
 	<div class="row text-center">
 		<div class="col-sm-8">
 			<div style="clear: both;" align="center">
-				<audio id="player2" controls="controls" preload="auto">
-					<source id="source2" src="" type="audio/mpeg" />
+				<br><br><br><br><br>
+				<audio id="player2" controls="controls" autoplay>
+					<source src="../audios/banana.mp3" type="audio/mpeg">
 				</audio>
-				<br> <input type="button" id="prv2" value="prev"
-					onclick="load2_proc2()"> <input type="button"
-					onclick="doPlay()" value="start"> <input type="button"
-					onclick="doPause()" value="pause"> <input type="button"
-					id="next2" value="next" onclick="load2_proc()"> <br> <br>
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="list-group2" style="width: 200px">
+			<div class="list-group" style="width: 200px">
 				<a href="#" class="list-group-item active"> 플레이 리스트 </a> 
 				<a href="#" onclick="listPlay2(0)" class="list-group-item">오디오1</a> 
 				<a href="#" onclick="listPlay2(1)" class="list-group-item">오디오2</a> 
 				<a href="#" onclick="listPlay2(2)" class="list-group-item">오디오3</a> 
 				<a href="#" onclick="listPlay2(3)" class="list-group-item">오디오4</a>
+				<a href="#" onclick="listPlay2(4)" class="list-group-item">오디오4</a>
 			</div>
 		</div>
 	</div>
@@ -187,89 +184,28 @@
 </body>
 <script type="text/javascript">
 //오디오부분
-      var player2 = document.getElementById('player2');
-      var source2 = document.getElementById('source2');
-      
-      //var playlists = new Array();
-      var playlists2 = Array("../audios/banana","../audios/haha","../audios/bono","../audios/pika2","../audios/baby");
+      var player2 = document.getElementById("player2");
+      var playlist2 = Array("../audios/banana.mp3","../audios/haha.mp3","../audios/bono.mp3","../audios/pika2.mp3","../audios/baby.mp3");
       var index2 = 0;
+     
       
-      function doPlay(){
-          var obj = document.getElementById("player2");
-          obj.play();
-       }
-      function doPause(){
-          var obj = document.getElementById("player2");
-          obj.pause();
-      }
+      //끝나면 다음 오디오 자동 재생
+      player2.onended = function() {
+         index2++;
+         if (index2 >= playlist2.length) {
+      	      index2 = 0;
+      	   } 
+         player2.setAttribute("src", playlist2[index2]);
+         player2.autoplay=true;
+      };
 
-
-      function getItem(){
-          var returnVal = playlists2[index2];
-          if(++index2>playlists2.length-1){
-             index2 = 0;
-         }
-          return returnVal;
-      }
-      function getItem2(){
-          var returnVal = playlists2[index2];
-           if (index2-- == -1) {
-                index2 = playlists2.length;
-           }
-          return returnVal;
-      }
-
-      function listPlay2(listindex){
-    		index2=listindex;
-    	   source2.setAttribute("src", playlist2[index2] + ".mp3");
-    	   source2.autoplay=true;
-    	}
-      function load2_proc(){
-
-         if(player2.canPlayType("audio/mpeg")!=""){
-               source2.src = getItem() + ".mp3";
-              source2.type = "audio/mpeg";
-          } 
-          player2.load();
-          player2.play();
-         
-          
-         if(player2.attachEvent != null){
-               player2.attachEvent("onended",load2_proc);
-          } else {
-               player2.addEventListener("ended",load2_proc,false);
-          }
-      }
-      if(window.attachEvent != null){
-           window.attachEvent("onload",load2_proc);
-           
-      } else {
-           window.addEventListener("load",load2_proc,false);
-      }
-      
-      function load2_proc2(){
-
-         if(player.canPlayType("audio/mpeg")!=""){
-               source2.src = getItem2() + ".mp3";
-              source2.type = "audio/mpeg";
-          } 
-          player2.load();
-          player2.play();
-         
-          
-         if(player.attachEvent != null){
-               player2.attachEvent("onended",load2_proc);
-          } else {
-               player2.addEventListener("ended",load2_proc,false);
-          }
-      }
-      if(window.attachEvent != null){
-           window.attachEvent("onload",load2_proc);
-           
-      } else {
-           window.addEventListener("load",load2_proc,false);
-      }
-   
+	//오디오 플레이리스트 
+	function listPlay2(listindex) {
+		index2 = listindex;
+		player2.src = playlist2[index2];
+		player2.autoplay = true;
+	}
+	
    </script>
 
 <!-- 비디오 플레이어 -->
