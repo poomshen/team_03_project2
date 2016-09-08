@@ -39,27 +39,131 @@
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
-  #v1{
-  	width:360px;
-  	height:240px;
+
+  #v1,#v2,#v3,#v4,#v5,#v6,#v7{
+     width:360px;
+     height:240px;
   }
-  #div1{
-  	display : none;
+  #div1,#div2,#div3,#div4,#div5,#div6,#div7{
+     display : none;
+
   }
 </style>
 <script type="text/javascript">
 
-	$(function(){
-		var div = document.getElementById("div1");
-		$("#video1").click(function(){
-			if(div.style.display == "block"){
-   			 div.style.display = "none";
+
+   $(function(){
+      var div = document.getElementById("div1");
+      var div2 = document.getElementById("div2");
+      var div3 = document.getElementById("div3");
+      var div4 = document.getElementById("div4");
+      var div5 = document.getElementById("div5");
+      var div6 = document.getElementById("div6");
+      var div7 = document.getElementById("div7");
+      
+      //autoplay
+      $("#video1").click(function(){
+    	  var video = document.getElementById("v1");
+         if(div.style.display == "block"){
+             div.style.display = "none";
+             video.muted=true;
              }
              else{
-           	  div.style.display = "block";
+                div.style.display = "block";
+                video.autoplay = true;
+                video.load();
+                video.muted=false;
              }
-		});
-	});
+      }); 
+      
+      //loop
+      $("#video2").click(function(){
+    	  var video2 = document.getElementById("v2")
+          if(div2.style.display == "block"){
+              div2.style.display = "none";
+              video2.muted=true;
+              }
+              else{
+                 div2.style.display = "block";
+                 video2.load();
+                 video2.muted=false;
+              }
+       });
+      
+      //poster
+      $("#video3").click(function(){
+    	  var video3 = document.getElementById("v3")
+          if(div3.style.display == "block"){
+              div3.style.display = "none";
+              video3.muted=true;
+              }
+              else{
+                 div3.style.display = "block";
+                 video3.load();
+                 video3.muted=false;
+              }
+       });
+      
+	  //pre-auto
+      $("#video4").click(function(){
+    	  var video4 = document.getElementById("v4")
+          if(div4.style.display == "block"){
+              div4.style.display = "none";
+              video4.muted=true;
+              }
+              else{
+                 div4.style.display = "block";
+                 video4.load();
+                 video4.muted=false;
+              }
+       });
+
+	  //pre-matadata
+      $("#video5").click(function(){
+    	  var video5 = document.getElementById("v5")
+          if(div5.style.display == "block"){
+              div5.style.display = "none";
+              video5.muted=true;
+              }
+              else{
+                 div5.style.display = "block";
+                 video5.load();
+                 video5.muted=false;
+              }
+       });
+
+	  //pre-none
+      $("#video6").click(function(){
+    	  var video6 = document.getElementById("v6")
+          if(div6.style.display == "block"){
+              div6.style.display = "none";
+              video6.muted=true;
+              }
+              else{
+                 div6.style.display = "block";
+                 video6.load();
+                 video6.muted=false;
+              }
+       });
+
+	  //mute
+      $("#video7").click(function(){
+    	  var video7 = document.getElementById("v7")
+          if(div7.style.display == "block"){
+              div7.style.display = "none";
+              video7.muted=true;
+              }
+              else{
+                 div7.style.display = "block";
+                 video7.load();
+                 video7.muted=false;
+              }
+       });
+      
+      
+      
+   });
+
    /* var flag = true;
    var flag2 = true;
    var flag3 = true;
@@ -69,14 +173,6 @@
    var flag7 = true;
    
    window.onload = function() {
-      var video1 = document.getElementById("video1");
-      var video2 = document.getElementById("video2");
-      var video3 = document.getElementById("video3");
-      var video4 = document.getElementById("video4");
-      var video5 = document.getElementById("video5");
-      var video6 = document.getElementById("video6");
-      var video7 = document.getElementById("video7");
-         
 
       //autoplay
       video1.onclick = function() {
@@ -109,7 +205,7 @@
          }
          
          
-      }
+      } 
       
         //loop
          video2.onclick = function() {
@@ -293,6 +389,7 @@
    }
  */</script>
 </head>
+
 <body>
     <div class="container-fluid">
     <div class="navbar-header">
@@ -315,7 +412,7 @@
             <li><a href="video.html">Video</a></li>
             <li><a href="audio.html">Audio</a></li>
             <li><a href="JavaScriptVideo.html">JavaScriptVideo</a></li>
-      		  <li><a href="Plug-ins.html">Plug-ins</a></li>
+              <li><a href="Plug-ins.html">Plug-ins</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -345,23 +442,56 @@
    <input type="button" id="video7" value="muted">
 
 
+
    <div id="div1" align = "center">
-   		<video id = "v1" autoplay >
-   			<source src = "../videos/aa.mp4" type = "video/mp4">
-   		</video><br>
-   		<img src = "../images/autoplay.GIF">
+         <video id = "v1" controls  >
+            <source src = "../videos/aa.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/autoplay.GIF">
+   </div> 
+   
+ 
+   <div id="div2" align = "center">
+   		<video id = "v2" loop="loop">
+            <source src = "../videos/bb.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/loop.GIF">
    </div>
    
-   <div id="div2"></div>
-   <div id="div3"></div>
-   <div id="div4"></div>
-   <div id="div5"></div>
-   <div id="div6"></div>
-   <div id="div7"></div>
-
+   <div id="div3" align = "center">
+   		<video id = "v3" controls poster="../images/Untitled-2 copy.png">
+            <source src = "../videos/aa.mp4" type = "video/mp4">      
+         </video><br>
+         <img src = "../images/poster.GIF">
+   </div>
+   
+   <div id="div4" align = "center">
+   	<video id = "v4" controls preload="auto">
+            <source src = "../videos/bb.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/auto.GIF">
+   </div>
+   
+   <div id="div5" align = "center">
+   		<video id = "v5" controls preload="metadata">
+            <source src = "../videos/aa.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/metadata.GIF">
+   </div>
+   
+   <div id="div6" align = "center">
+   		<video id = "v6" controls preload="none">
+            <source src = "../videos/bb.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/none.GIF">
+   </div>
+   
+   <div id="div7" align = "center">
+   		<video id = "v7" controls muted="muted" >
+            <source src = "../videos/aa.mp4" type = "video/mp4">
+         </video><br>
+         <img src = "../images/muted.GIF">
+   </div>
+   
 </body>
-  
-
-  
-    	
 </html>
