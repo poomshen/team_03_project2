@@ -3,8 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
+<script type="text/javascript">
+  $(function(){
+	  //var id = document.getElementById("id").value();
+	  var idck = false;
+	  var passck = false;
+	  var passck2 = false;
+	  var emailck = false;
+	  var phone = false;
+	  
+	  $("#id").keydown(function(){
+		  var  regExp  = /^[a-zA-Z]\w{4,19}$/; 
+		   if(regExp.test($("#id").val())){
+			   $("#idck").attr("class", "form-group has-success has-feedback");
+			   $("#idsp").attr("class","glyphicon glyphicon-ok form-control-feedback");
+			  idck = true;
+		   }else{
+			   $("#idck").attr("class", "form-group has-error has-feedback");
+			   $("#idsp").attr("class","glyphicon glyphicon-remove form-control-feedback");
+			  idck = false;
+		   }
+	  })
+		$("#pwd").keydown(function(){
+			var regExpPw = /^[a-z0-9_-]{6,18}/;
+			if(regExpPw.test($("#pwd").val())){
+				   $("#pwdck").attr("class", "form-group has-success has-feedback");
+				   $("#pwdsp").attr("class","glyphicon glyphicon-ok form-control-feedback");
+				   passck = true;
+			}else{
+				 $("#pwdck").attr("class", "form-group has-error has-feedback");
+				  $("#pwdsp").attr("class","glyphicon glyphicon-remove form-control-feedback");
+				   passck = false;
+			}
+		})
+		$("#pwd2").keyup(function(){
+			
+			 if($("#pwd2").val() == $("#pwd").val()){
+				   $("#pwdck2").attr("class", "form-group has-success has-feedback");
+				   $("#pwdsp2").attr("class","glyphicon glyphicon-ok form-control-feedback");
+				   passck2 = true;
+			}else{
+				 $("#pwdck2").attr("class", "form-group has-error has-feedback");
+				  $("#pwdsp2").attr("class","glyphicon glyphicon-remove form-control-feedback");
+				    passck2 = false;
+			} 
+		})
+		$("#email").keydown(function(){
+		var regExpEmail=/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+			if(regExpEmail.test($("#email").val())){
+				  $("#emailck").attr("class", "form-group has-success has-feedback");
+				   $("#emailsp").attr("class","glyphicon glyphicon-ok form-control-feedback");
+				   emailck = true;
+			}else{
+				 $("#emailck").attr("class", "form-group has-error has-feedback");
+				  $("#emailsp").attr("class","glyphicon glyphicon-remove form-control-feedback");
+				   emailck = false;
+			}
+		})
+		$("#phone").keyup(function(){
+			var regExpHp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+			if(regExpHp.test($("#phone").val())){
+				  $("#phonck").attr("class", "form-group has-success has-feedback");
+				   $("#phonsp").attr("class","glyphicon glyphicon-ok form-control-feedback");
+				   phone = true;
+			}else{
+				 $("#phonck").attr("class", "form-group has-error has-feedback");
+				  $("#phonsp").attr("class","glyphicon glyphicon-remove form-control-feedback");
+				   phone = false;
+			}
+		})
+		
+		$("#submit").click(function(){
+			if(!idck){
+				alert("아이디의 값이 제대로 설정되지 못했습니다.");
+				$("#id").focus();
+				return false;
+			}else if(!passck){
+				alert("비밀번호의 값이 제대로 설정되지 못했습니다.");
+				$("#pwd").focus();
+				return false;
+			}else if(!passck2){
+				alert("비밀번호의 값이 제대로 설정되지 못했습니다.");
+				$("#pwd2").focus();
+				return false;
+			}else if(!emailck){
+				alert("이메일의 값이 제대로 설정되지 못했습니다.");
+				$("#phone").focus();
+				return false;
+			}else if(!phone){
+				alert("핸드폰 값이 제대로 설정되지 못했습니다.");
+				$("#email").focus();
+				return false;
+			}else if($("#year").val() == ""){
+				alert("생일 값이 제대로 설정되지 못했습니다.");
+				$("#year").focus();
+				return false;
+			}
+			
+		})
+			
+		
+  });
+</script>
 <body>
-
+<div style="margin-left: 20%; margin-right: 20%">
+<h3>회원가입</h3>
+<form action="Main.html">
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group" id="idck">
+      <label for="id">ID:</label>
+      <input type="text" class="form-control" id="id">
+      <span class="" id ="idsp"></span>
+    </div>
+    <div class="form-group" id="pwdck">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+      <span class="" id ="pwdsp"></span>
+    </div>
+    <div class="form-group" id="pwdck2">
+      <label for="pwd2">rePassword:</label>
+      <input type="password" class="form-control" id="pwd2">
+        <span class="" id ="pwdsp2"></span>
+    </div>
+    <div class="form-group" id="emailck">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email">
+      <span class="" id ="emailsp"></span>
+    </div>
+    <div class="form-group" id="phonck">
+      <label for="phone">Phone:</label>
+      <input type="text" class="form-control" id="phone">
+      <span class="" id ="phonsp"></span>
+    </div>
+    <div class="form-inline">
+    <div class="form-group">
+      <label for="year">생년월일:</label>
+      <input type="text" name="year" class="form-control"  id="year"> 년 <select
+					name="month" class="form-control">
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+					</select> 월 <select name="day" class="form-control">
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+				</select> 일
+    </div>
+    </div>
+    <br>
+    <input type="submit" value="회원가입" class="btn btn-primary btn-lg btn-block" id="submit">
+    <input type="reset" value="취소"  class="btn btn-default btn-lg btn-block">
+    <br>
+  </form>
+</div>
 </body>
 </html>
