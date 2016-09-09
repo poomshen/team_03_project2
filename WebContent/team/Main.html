@@ -27,7 +27,7 @@
   }
   .carousel-inner img {
  /*      -webkit-filter: grayscale(90%); */
-      filter: grayscale(100%); /* make all photos black and white  */
+      /* make all photos black and white  */
       width: 100%; /* Set width to 100% */
       margin: auto;
   }
@@ -115,46 +115,14 @@ function send() {
  }
 }
 </script>
+<script type="text/javascript">
+$(function(){
+ $("#tob").load("MenuBar.html" );
+})
+</script>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="Login.html">Login</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right" name = "ul">
-        <li><a href="Main.html">Main</a></li>
-        <li><a href="Intro.html">Intro</a></li>
-        <li><a href="#">Board</a></li>
-          <li class="dropdown">
-         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="video.html">Video</a></li>
-            <li><a href="audio.html">Audio</a></li>
-            <li><a href="JavaScriptVideo.html">JavaScriptVideo</a></li>
-      		  <li><a href="Plug-ins.html">Plug-ins</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">ETC
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="YouTube.html">YouTube</a></li>
-            <li><a href="YouTube2.html">YouTube2</a></li>
-            <li><a href="FileUp.html">FileUpload</a></li>
-          </ul>
-        </li>
-        <li><input type = "text" size = "10" style = "margin:11px" id = "search"></li>
-        <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="send(); return false"></span></a></li>
-      </ul>
-    </div>
-  </div>
+<div id="tob"></div>
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -167,7 +135,7 @@ function send() {
     <!-- 움직이는 화면 들 -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="../images/Untitled-1.png" alt="New York" width="1200" height="700">
+        <img src="../images/Untitled-1.png" alt="포켐몬" width="1200" height="700">
         <div class="carousel-caption">
           <h3>포켓몬칭구칭구들!!</h3>
           <p>우리는 포켓몬 얍!★</p>
@@ -175,7 +143,7 @@ function send() {
       </div>
 
       <div class="item">
-        <img src="../images/Untitled-2 copy.png" alt="Chicago" width="1200" height="700">
+        <img src="../images/Untitled-2 copy.png" alt="칭구칭구" width="1200" height="700">
         <div class="carousel-caption">
           <h3>잠오는 피카~츄 zZ</h3>
           <p>피카츄야 잘자 내꿈꿔^3^ 쪽!</p>
@@ -183,7 +151,7 @@ function send() {
       </div>
     
       <div class="item">
-        <img src="../images/Untitled-2.png" alt="Los Angeles" width="1200" height="700">
+        <img src="../images/Untitled-2.png" alt="얍" width="1200" height="700">
         <div class="carousel-caption">
           <h3>피카~츄ㅇㅅㅇ)//</h3>
           <p>피카츄는 피카피카♥</p>
