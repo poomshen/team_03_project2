@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
+<title>Intro</title>
+  	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+ .container {
+      padding: 80px 120px;
+  }
+  img {
+  	max-width:100%;
+  	height:auto;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+ /*      -webkit-filter: grayscale(90%); */
+      filter: grayscale(100%); /* make all photos black and white  */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+</style>
+<script type="text/javascript">
+$(function() {
+    $.widget("custom.catcomplete", $.ui.autocomplete, {
+       _create : function() {
+          this._super();
+          this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+       },
+       _renderMenu : function(ul, items) {
+          var that = this,
+             currentCategory = "";
+          $.each(items, function(index, item) {
+             var li;
+             if (item.category != currentCategory) {
+                ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                currentCategory = item.category;
+             }
+             li = that._renderItemData(ul, item);
+             if (item.category) {
+                li.attr("aria-label", item.category + " : " + item.label);
+             }
+          });
+       }
+    });
+
+    var data = [
+                { label: "Video", category: "Media" },
+                { label: "Audio", category: "Media" },
+                { label: "JavaScriptVideo", category: "Media" },
+                { label: "YouTube", category: "ETC" },
+                { label: "YouTube2", category: "ETC" }
+              ];
+
+    $("#search").catcomplete({
+       delay : 0,
+       source : data
+    });
+
+ });
+
+
+
+function send() {
+ var psearch = $("#search").val();
+
+
+ if (psearch == "Video") {
+	 location.href = "video.html";
+    
+ }
+
+ if (psearch == "Audio") {
+	 location.href = "audio.html";
+    
+ }
+
+ if (psearch == "JavaScriptVideo") {
+	 location.href = "JavaScriptVideo.html";
+    
+ }
+
+ if (psearch == "YouTube") {
+	 location.href = "YouTube.html";
+    
+ }
+
+ if (psearch == "YouTube2") {
+	 location.href = "YouTube2.html";
+    
+ }
+}
+</script>
+   <style type="text/css">
+      th {text-align:center;}
+   </style>
 </head>
 <body>
-  <div class="container-fluid">
+      <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -38,10 +151,131 @@
             <li><a href="FileUp.html">FileUpload</a></li>
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+               <li><input type = "text" size = "10" style = "margin:11px" id = "search"></li>
+        <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="send(); return false"></span></a></li>
       </ul>
     </div>
   </div>
+  
+<!-- <img src = "../images/Untitle1.png"> -->
+<div id="wrapper" style="margin-left:25%;margin-right:25%;">
+
+	<div class="panel panel-default">
+  			<div class="panel-heading">네비게이션</div>
+  			<div class="panel-body">
+  				<ul>
+  					<li>div class="navbar-header"</li>
+  				</ul>			
+  			</div>
+		</div>	       
+
+    	<div class="panel panel-default">
+  			<div class="panel-heading">Main</div>
+  			<div class="panel-body">
+  				<ul>
+  					<li>w3schools의 band 테마 사용</li>
+  					<li>사진 첨부(div class="img-circle person")</li>
+  					<li>이미지 클릭 이벤트(data-toggle="collapse")</li>
+  					<li>화면 3분할(div class="col-sm-4")</li>	
+  				</ul>	
+  			</div>
+		</div>
+
+   		<div class="panel panel-default">
+  			<div class="panel-heading">Intro</div>
+  			<div class="panel-body">
+  				<ul>
+  					<li>반응형 테이블을 위해 div class="w3-table-all notranslate" 사용</li>
+  				</ul>
+  			</div>
+		</div>
+		
+		<div class="panel panel-default">
+  			<div class="panel-heading">Audio, Video</div>
+  			<div class="panel-body">
+  				<ul>
+  					<li>버튼에 class = "btn btn-info", class = "btn btn-danger"</li>
+  					<li>반응형 이미지를 위해 css 수정</li>
+  					 	img { max-width:80%; height:auto; }
+  				</ul>
+  			</div>
+		</div>
+		
+		<div class="panel panel-default">
+  			<div class="panel-heading">JavascriptVideo</div>
+  			<div class="panel-body">
+  				<ul>
+  					<li>플레이 리스트</li>
+  						<ul>
+  							<li>div class="col-sm-4"</li>
+  							<li>div class="list-group"</li>
+  						</ul>
+  					<li>컨트롤박스</li>
+  						<ul>
+  							<li>div class="panel panel-default"</li>
+  							<li>div class="panel-heading"</li>
+  							<li>div class="panel-body"</li>
+  						</ul>
+  					<li>화면분할</li>
+  						<ul>
+  							<li>div class="col-sm-8"</li>
+  							<li>div class="col-sm-4"</li>				
+	  					</ul>
+  				</ul>
+  			</div>
+		</div>	
+		
+		<div class="panel panel-default">
+  			<div class="panel-heading">Youtube/Youtube2</div>
+  			<div class="panel-body">
+  			<ul>
+  				<li>class="carousel slide"</li>
+  				<li>class="carousel-indicators"</li>
+  				<li>class="item active embed-responsive embed-responsive-16by9"</li>
+  				<li>iframe class="embed-responsive-item"</li>
+  			</ul>
+            </div>
+		</div>
+		
+		<div class="panel panel-default">
+  			<div class="panel-heading">로그인</div>
+  			<div class="panel-body">
+  			<ul>
+   				<li>input type="text" class="form-control" name="id" placeholder="아이디 입력"</li>
+			    <li>input type="password" class="form-control" name="pw"  placeholder="비밀번호 입력"</li>
+   				<li>button type="submit" class="btn btn-default"</li>
+      		    <li>button type="button" class="btn btn-default"</li>
+				<li> button type="button" class="btn btn-default"</li>
+			</ul>
+            </div>
+		</div>
+		
+		<div class="panel panel-default">
+  			<div class="panel-heading">회원가입</div>
+  			<div class="panel-body">
+  			<ul>
+   				<li>"class", "form-group has-success has-feedback" (값이 맞게 들어온 경우)</li>
+   				<li>"class","glyphicon glyphicon-ok form-control-feedback"</li>
+   				<li>"class", "form-group has-error has-feedback" ()값이 틀리게 작성된 경우</li>
+   				<li>"class","glyphicon glyphicon-remove form-control-feedback"</li>
+   				<li>"class="form-control" (입력창)</li>
+   				<li>"class="btn btn-primary btn-lg btn-block" (버튼)</li>
+			</ul>
+            </div>
+		</div>
+		
+		<div class="panel panel-default">
+  			<div class="panel-heading" style="background-color:red;color:white">어려웠던 점</div>
+  			<div class="panel-body">
+  			<ul>
+				<li>div 또는 하위 요소들이 원하는데로 배치가 되지 않음</li>
+ 				<li>다른 부트스트랩 요소를 가져와서 합칠 때 충돌이 많이 발생</li>
+			</ul>
+            </div>
+		</div>
+				  
+</div>	
+
 
 </body>
 </html>
