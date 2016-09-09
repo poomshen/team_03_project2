@@ -17,7 +17,7 @@
 	  var passck2 = false;
 	  var emailck = false;
 	  var phone = false;
-	  
+	  $("#tob").load("MenuBar.html" );
 	  $("#id").keydown(function(){
 		  var  regExp  = /^[a-zA-Z]\w{4,19}$/; 
 		   if(regExp.test($("#id").val())){
@@ -112,6 +112,8 @@
   });
 </script>
 <body>
+<div id = "tob"></div>
+
 <div style="margin-left: 20%; margin-right: 20%">
 <h3>회원가입</h3>
 <form action="Main.html">
